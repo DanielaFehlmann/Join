@@ -1,0 +1,73 @@
+
+
+
+
+
+{"users":"[{\"username\":\"Anton Mayer\",\"email\":\"antom@gmail.com\",\"password\":\"hguzg\"},
+{\"username\":\"David Eisenberg\",\"email\":\"davidberg@gmail.com\",\"password\":\"890\"},
+{\"username\":\"Eva Fischer\",\"email\":\"eva@gmail.com\",\"password\":\"123\"},
+{\"username\":\"Marcel Bauer\",\"email\":\"bauer@gmail.com\",\"password\":\"345\"},
+{\"username\":\"Tatjana Wolf\",\"email\":\"wolf@gmail.com\",\"password\":\"890\"},
+{\"username\":\"Leo\",\"email\":\"email@email.de\",\"password\":\"123\"},
+{\"username\":\"HugoHuber\",\"email\":\"testmail@test.de\",\"password\":\"2345\"},
+{\"username\":\"Herbert Mayer\",\"email\":\"herbM@gmx.de\",\"password\":\"1323234\"},
+{\"username\":\"Helga Kessler\",\"email\":\"kessler@gmail.com\",\"password\":\"12345\"},
+{\"username\":\"Tobias Mueller\",\"email\":\"tobiMuller@tnet.de\",\"password\":\"tobi\"},
+{\"username\":\"Ölfons Ahre\",\"email\":\"user@test.de\",\"password\":\"46899\"}]",
+"contacts":"[{\"name\":\"Anton Mayer\",\"email\":\"antom@gmail.com\",\"phone\":\"089/1234567\"},{\"name\":\"David Eisenberg\",\"email\":\"davidberg@gmail.com\",\"phone\":\"07235/64790\"},{\"name\":\"Eva Fischer\",\"email\":\"eva@gmail.com\",\"phone\":\"0163/77735798\"},{\"name\":\"Marcel Bauer\",\"email\":\"bauer@gmail.com\",\"phone\":\"05341/83578\"},{\"name\":\"Datjana Wolf\",\"email\":\"wolf@gmail.com\",\"phone\":\"089/250721\"},{\"name\":\"Helga Kessler\",\"email\":\"kessler@gmail.com\",\"phone\":\"\"},{\"name\":\"Tobias Mueller\",\"email\":\"tobiMuller@tnet.de\",\"phone\":\"\"},{\"name\":\"Ölfons Ahre\",\"email\":\"user@test.de\",\"phone\":\"\"}]",
+"all_tasks":"[{\"title\":\"dasIstEinTitel\",\"description\":\"dasIstEineBeschreibung\",\"category\":[{\"name\":\"backoffice\",\"color\":\"blue\"}],\"contactNames\":[\"You\",\"Max Wolfberg\"],\"invitedContacts\":[\"johanna@gmx.at\",\"caro@gmx.at\"],\"date\":\"22/03/2023\",\"prio\":\"urgent\",\"subtasks\":[\"subtask1\",\"subtask2\"],\"progress\":\"todo\"}]"}
+
+
+
+
+
+
+{{\"users\":"[{\"username\":\"Anton Mayer\",\"email\":\"antom@gmail.com\",\"password\":\"hguzg\"},{\"username\":\"David Eisenberg\",\"email\":\"davidberg@gmail.com\",\"password\":\"890\"},{\"username\":\"Eva Fischer\",\"email\":\"eva@gmail.com\",\"password\":\"123\"},{\"username\":\"Marcel Bauer\",\"email\":\"bauer@gmail.com\",\"password\":\"345\"},{\"username\":\"Tatjana Wolf\",\"email\":\"wolf@gmail.com\",\"password\":\"890\"},{\"username\":\"Leo\",\"email\":\"email@email.de\",\"password\":\"456\"}]"},
+{\"all_tasks\":"[{\"title\":\"Code Join\",\"description\":\"Coding an app in group\",\"category\":\"Backoffice\",\"assignedTo\":\"Anton Mayer\",\"date\":\"11/02/2023\",\"prio\":\"medium\"},{\"title\":\"Sale PCs\",\"description\":\"Organize new PCs\",\"category\":\"Sales\",\"assignedTo\":\"David Eisenberg\",\"date\":\"13/09/2023\",\"prio\":\"urgent\"}]"},
+{\"contacts\":"[{\"name\":\"Anton Mayer\",\"email\":\"antom@gmail.com\",\"phone\":\"089/1234567\"},
+{\"name\":\"David Eisenberg\",\"email\":\"davidberg@gmail.com\",\"phone\":\"07235/64790\"},
+{\"name\":\"Eva Fischer\",\"email\":\"eva@gmail.com\",\"phone\":\"0163/77735798\"},
+{\"name\":\"Marcel Bauer\",\"email\":\"bauer@gmail.com\",\"phone\":\"05341/83578\"},
+{\"name\":\"Tatjana Wolf\",\"email\":\"wolf@gmail.com\",\"phone\":\"089/250721\"}]"}}
+users = [
+    {
+        "username": "name",
+        "email": "email",
+        "password": "password",
+        "color":"color"
+    },
+    {
+        ...
+        ...
+    }
+]
+
+
+let all_tasks= [
+    {
+       "title": "das ist ein Titel",
+       "description": "das ist eine Beschreibung",
+       "category": "das ist eine Kategorie",
+       "color": "#ffffff",
+       "contactNames": ["You","Max Wolfberg"],
+       "date": "22/03/2023",
+       "prio": "urgent",
+       "subtasks": ["subtask1","subtask2"],
+       "progress":"todo"
+    },
+];
+
+
+contacts = [
+    {
+        "name": "name",
+        "email": "email",
+        "phone": "phone"
+        "color": "color"
+    },
+    {
+        ...
+        ...
+    }
+]
+

@@ -1,0 +1,54 @@
+<form id="popupEditFormId"
+onsubmit="saveEditPopupBoard();return false;"
+class="contPopupEditTaskBoard">
+<!-- title -->
+<div class="column title">
+    <span>Title</span>
+    <input value="" required placeholder="Enter a title" type="text" onkeyup="addTitle()"
+        id="titleInput">
+</div>
+<!-- description -->
+<div class="column description">
+    <span>Description</span>
+    <textarea required placeholder="Enter a Description" type="text" onkeyup="addDescription()"
+        id="descriptionTextarea"></textarea>
+</div>
+<!-- due date -->
+<div class="column">
+    <span>Due date</span>
+    <input value="" type="text" required placeholder="dd/mm/yyyy" id="datepicker"
+        pattern="\d{1,2}\/\d{1,2}\/\d{4}"
+        style="background: url('assets/img/calendar.svg') no-repeat 95%; background-color: white;">
+</div>
+<!-- prio -->
+<div class="column">
+    <span>Prio</span>
+    <div class="prioButtons">
+        <div onclick="addPrio(0)" id="prioButton0" style="background-color:white;">Urgent <img
+                id="prioImage0" src="assets/img/urgent_newTask.svg"></div>
+        <div onclick="addPrio(1)" id="prioButton1" style="background-color:white;">Medium <img
+                id="prioImage1" src="assets/img/medium_newTask.svg"></div>
+        <div onclick="addPrio(2)" id="prioButton2" style="background-color:white;">Low <img id="prioImage2"
+                src="assets/img/low_newTask.svg"></div>
+    </div>
+</div>
+<div class="column contacts">
+    <span>Assigned to</span>
+    <div class="selectField" id="selectFieldContact" onclick="openCloseContacts()">
+        <div class="selectContact" id="selectContact">
+            <input id="contact" required placeholder="Select contacts to assign">
+            <div id="contactImage"><img class="paddingRight" src="assets/img/arrow_drop.svg"></div>
+        </div>
+        <div class="d-none" id="openedContacts" onclick="notOpenCloseContacts(event)">
+        </div>
+    </div>
+    <div id="addedContacts"></div>
+</div>
+
+
+
+<button type="submit" class="create-new-contact-check">
+    OK <img src="./assets/img/contact_check.png" alt="">
+</button>
+<img onclick="cancleEditTask()" class="popup-close" src="./assets/img/board_popup_close.png" alt="">
+</form>

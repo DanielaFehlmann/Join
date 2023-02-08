@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href= "https://gruppe-430.developerakademie.net/favicon_io/favicon.ico">
+    <title>Join</title>
+    <script src="js/script.js"></script>
+    <script src="js/summary.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/head.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/head.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/summary.css" />
+    <link rel="stylesheet" href="./css/head.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="css/login.css" />
+    </head>
+  <body onload="initSum()" onresize="resizeElements()">
+<!------------------------------------templates nav and head--------------------------------->
+        <div w3-include-html="assets/templates/nav.html"></div>
+        <div w3-include-html="assets/templates/head.html"></div>
+<!-----------------------------------popmessage---------------------------------------------->
+
+
+<!------------------------------------summary of tasks--------------------------------------->
+      <div id="summary-container" class="main-content-container">
+       
+        <div id="subhead">Kanban Management Tool</div>
+        <div id="heading">
+            <h1>Summary</h1>
+            <div id="blueline-head"></div>
+            <div class="heading-add">Everything is a nutshell</div>
+        </div>
+
+        <div id="task-container">
+
+<!----------------------------overview of tasks on board----------------------------------->
+            <div id="task-overview">
+                <div class="progress-container move" id="progress-cont" >
+                    <div class="progress box-shadow" id="on-board" onclick="getToBoard()">
+                        <span id="num-board">3</span>
+                        <p>Tasks in<br>Board</p>
+                    </div>
+                    <div class="progress box-shadow move" id="in-progress" onclick="getToBoard()">
+                        <span id="num-progress">2</span>
+                        <p>Tasks in<br>Progress</p>
+                        <!--<div id="popmessage" class="small" onmouseenter="raise()" onmouseleave="toSmall()">
+    
+                        </div>-->
+                    </div>
+                    <div class="progress box-shadow move" id="at-feedback" onclick="getToBoard()">
+                        <span id="num-feedback">1</span>
+                        <p>Awaiting<br>Feedback</p>
+                    </div>
+                </div>
+<!-------------------------------------urgent-tasks------------------------------------------->
+                <div id="important" class="important-container box-shadow move" onclick="getToBoard()" >
+                    <div id="urgent-box">
+                    <img src="assets/img/urgent_arrow.svg">
+                    <div class="urgent-container" >
+                        <span id="num-urgent">1</span>
+                        <p>Urgent</p>
+                    </div>
+                </div>
+                <div id="grey-line"></div>
+                    <div id="deadline-container-box">
+                    <div id="" class="deadline-container" onclick="getToBoard()">
+                        <span id="" class="deadline">15.Januar 2023, 15 Uhr</span>
+                        <p>Upcoming Deadline</p>
+                    </div>
+                </div>
+
+<!----------------------------container for todos and dones-------------------------------->
+                </div>
+                <div id="do-cont" class="todos-container">
+                    <div id="todos" class="todo box-shadow move" onclick="getToBoard()" onmouseover="hover('img-todo','assets/img/todoreverse.svg')" onmouseout="unhover('img-todo','assets/img/todo.svg')">
+                        <img id="img-todo" src="assets/img/todo.svg">
+                        <div class="column">
+                        <span id="num-do" class="bold">1</span>
+                        <p>to do</p>
+                        </div>
+                    </div>
+                    <div id="done"class="todo box-shadow move" onclick="getToBoard()" onmouseover="hover('img-done','assets/img/donereverse.svg')" onmouseout="unhover('img-done','assets/img/done.svg')">
+                        <img id="img-done" src="assets/img/done.svg">
+                        <div class="column">
+                        <span id="num-done" class="bold">1</span>
+                        <p>done</p>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+        <!--------------Greeting of user  -------------------------------------------->
+            <div id="greet-container" class="greet-container"><span id="greeting">Good Morning</span>
+            <div id="greet-name">User</div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/vnd.microsoft.icon"
+      href="https://gruppe-430.developerakademie.net/favicon_io/favicon.ico"
+    />
+    <title>Join</title>
+    <script src="js/login.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="js/mini_backend.js"></script>
+  </head>
+  <body onload="getLogin()">
+    <div id="start-background" class="start"></div>
+    <img id="start-pic" class="logo-big" src="assets/img/logo_main.svg" />
+    <div id="newuser-container" class="d-none">
+      <p id="new-question">Not at Join?</p>
+      <a href="registration.html" id="sign-in">Sign in</a>
+    </div>
+    <div class="all-container">
+      <div id="login-container" class="d-none">
+        <h1>Log In</h1>
+        <div id="blue-line"></div>
+        <form onsubmit="getCurrentUser();return false" onclick="cleanLogin('mail-login','password-login')">
+          <input onclick="event.stopPropagation()"
+            id="mail-login"
+            class="mail-input"
+            required
+            type="email"
+            placeholder="E-mail"
+          />
+          <div id="password-cont">
+            <img id="eyelock" src="assets/img/password-icon.svg" onclick="event.stopPropagation(); getValueLogin('password-login','eyelock')">
+          <input onclick="event.stopPropagation()"
+            id="password-login"
+            class="password-input"
+            required
+            type="password"
+            placeholder="Passwort"
+           />
+        </div>
+          <div class="help-container">
+            <!--<p
+              id="passwordlog-toggle"
+              class="password-toggle"
+              onclick="togglePassword('password-login','passwordlog-toggle')"
+            >
+              Passwort zeigen
+            </p>-->
+            <div class="container-rember">
+              <input id="rememberme" type="checkbox" checked="true" onclick="event.stopPropagation()"><p>Remember me</p> 
+            </div>
+            <a id="new-password" href="forgot_password.html" onclick="event.stopPropagation()"
+              >Passwort vergessen</a
+            >
+          </div>
+          <div id="btn-box">
+            <button onclick="event.stopPropagation()" id="login-btn" class="login-btn">LogIn</button>
+            <div id="guest-btn" onclick="event.stopPropagation();guestLogin()">Guest LogIn</div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--------------------------popup-------------------------------------------------------->
+    <div id="popup-trys" class="d-none popup-user">
+      <p class="popup-user-p">
+        Nutzer nicht bekannt!<br />Bitte registrieren...
+      </p>
+    </div>
+    <!-----------------------Ende popup------------------------------------------------------->
+
+    <!--------------------------popup-------------------------------------------------------->
+    <div id="popup-try-again" class="d-none popup-user">
+      <p class="popup-user-p">
+        Passwort/Email nicht bekannt!<br />Nochmal versuchen
+      </p>
+    </div>
+    <!-----------------------Ende popup------------------------------------------------------->
+  </body>
+</html>

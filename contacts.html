@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href= "https://gruppe-430.developerakademie.net/favicon_io/favicon.ico">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/contacts.css" />
+    <link rel="stylesheet" href="./css/head.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/add_task.css" />
+    <script src="js/add_task.js"></script>
+    <script src="js/add_task_category.js"></script>
+    <script src="js/add_task_contacts.js"></script>
+    <script src="js/head.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/add_task_pop.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </head>
+
+  <body onload="includeHTML(), initContacts()">
+    <!--includes header and nav bar-->
+    <div w3-include-html="./assets/templates/head.html"></div>
+    -->
+    <div w3-include-html="./assets/templates/nav.html"></div>
+
+    <!--------------------------------popup add_task---------------------------------------->
+
+    <div id="contAddTaskToContact" class="new-task-pup-bgr d-none">
+        
+            <!--<div id="close" onclick="closeTaskCreator()">X</div>-->
+            <div id="temp-task" w3-include-html="assets/templates/contact_add_task.html"></div>
+        
+    </div>
+
+    <!-------------------------------End Popup Task-------------------------------------------------------------------->
+
+    <!-- popup create new contact -->
+    <div id="contCreateNewContact" class="new-contact-pup-bgr d-none"></div>
+    <!-- ---------------------------------------------------- -->
+
+    <!-- popup edit contact -->
+    <div id="contEditContact" class="new-contact-pup-bgr d-none"></div>
+    <!-- ---------------------------------------------------- -->
+
+    <!-- contacts main side -->
+    <div class="outer-cont-contacts-main">
+      <div class="cont-contacts-head">
+        <h1 class="contacts-header">Contacts</h1>
+        <div class="head-parting-line"></div>
+        <p class="head-comment">Better with a team</p>
+      </div>
+
+      <!-- open contact -->
+      <div id="openContact" class="cont-open-contact d-none"></div>
+    </div>
+    <!-- -------------------- -->
+
+    <!-- button for new contact -->
+    <button onclick="openNewContact()" class="contact-new-contact">
+      New contact <img src="./assets/img/contact_new_contact.png" alt="" />
+    </button>
+
+    <!-- success message -->
+    <div
+      class="cont-success-message"
+      style="transform: translateY(200%); display: none"
+    >
+      <span>Contact succesfully created</span>
+    </div>
+
+    <!-- all contacts -->
+    <div class="outer-cont-contacts">
+      <div id="contAllContacts" class="inner-cont-contacts"></div>
+    </div>
+    <!-- ---------- -->
+  </body>
+</html>

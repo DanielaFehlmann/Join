@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/vnd.microsoft.icon"
+        href="https://gruppe-430.developerakademie.net/favicon_io/favicon.ico">
+    <title>Join</title>
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/contacts.css" />
+    <link rel="stylesheet" href="./css/head.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="css/add_task.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="./js/script.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/add_task.js"></script>
+    <script src="./js/add_task_category.js"></script>
+    <script src="./js/add_task_contacts.js"></script>
+    <script src="js/head.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/mini_backend.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+</head>
+
+<body onload="includeHTML(), initBoard()">
+    <!--includes header and nav bar-->
+    <div w3-include-html="./assets/templates/head.html"></div>
+    <div w3-include-html="./assets/templates/nav.html"></div>
+
+    <!-- popup for tasks -->
+    <div id="boardPopupTask" class="popup-board-task-bgr d-none">
+
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <!-- popup for edit task -->
+    <div id="boardPopupTaskEdit" class="popup-board-task-bgr d-none">
+        <div id="includeHTMLEdit" w3-include-html-edit-task="./assets/templates/board_edit_task.html"></div>
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <!-- popup add task board -->
+    <div id="popupAddTaskBoard" class="popup-board-task-bgr d-none">
+        <div id="includeHTMLAdd" w3-include-html-add-task="./assets/templates/board_add_task.html"></div>
+    </div>
+    <!-- ---------------------------------------------------- -->
+
+    <div class="cont-board-side">
+        <!--contains head area "board // search-bar // add task"-->
+        <div class="cont-head">
+            <div class="mobile-header" id="subhead">Kanban Management Tool</div>
+            <h1 class="header-board">Board</h1>
+            <div class="cont-find-task">
+                <div class="find-task">
+                    <input id="filterTasks" onkeyup="filterTasks()" class="find-task-input" type="text"
+                        placeholder="Find Task">
+                    <div class="cont-find-task-right">
+                        <div class="find-task-stripe"></div>
+                        <img class="find-task-input-img" src="./assets/img/board_find_task_lupe.png" alt="">
+                    </div>
+                </div>
+                <button onclick="addTaskBoard()" class="add-task">
+                    <span>Add task</span> 
+                    <img class="add-task-plus-img" src="./assets/img/board_add_task_plus.png" alt="">
+                </button>
+    <!--------------------------------Trash-------------------------------------------------------------------------->
+                <div id="trash" class="add-task trash" ondrop="deleteTask()" ondragover="allowDrop(event)">
+                    <img class="trash-img" src="./assets/img/trash.png" alt="">
+                </div>
+
+
+    <!---------------------------------Trashend------------------------------------------------------------------------>
+            </div>
+        </div>
+        <!-- -------------------------------------------- -->
+
+        <!--contains todo // in progress // await for feedback // done-->
+        <div class="cont-todo">
+            <!--todo-->
+            <div class="cont-child-todo">
+                <div class="todo-head">
+                    <h2 class="todo-header">To do</h2>
+                    <img onclick="addTaskBoard('todo')" class="add-task-button"
+                        src="./assets/img/board_add_task_button.png" alt="">
+                </div>
+
+                <div class="hidden-auto" ondrop="drop('todo')" ondragover="allowDrop(event)" id="todo">
+
+                </div>
+            </div>
+
+            <!--in progress-->
+            <div class="cont-child-todo">
+                <div class="todo-head">
+                    <h2 class="todo-header">In Progress</h2>
+                    <img onclick="addTaskBoard('in Process')" class="add-task-button"
+                        src="./assets/img/board_add_task_button.png" alt="">
+                </div>
+
+                <div class="hidden-auto" ondrop="drop('in Process')" ondragover="allowDrop(event)" id="inProcess">
+
+                </div>
+            </div>
+
+            <!--await feedback-->
+            <div class="cont-child-todo">
+                <div class="todo-head">
+                    <h2 class="todo-header">Awaiting Feedback</h2>
+                    <img onclick="addTaskBoard('awaiting Feedback')" class="add-task-button"
+                        src="./assets/img/board_add_task_button.png" alt="">
+                </div>
+
+                <div class="hidden-auto" ondrop="drop('awaiting Feedback')" ondragover="allowDrop(event)" id="awaitingFeedback">
+
+                </div>
+            </div>
+
+            <!--done-->
+            <div class="cont-child-todo">
+                <div class="todo-head">
+                    <h2 class="todo-header">Done</h2>
+                    <img onclick="addTaskBoard('done')" class="add-task-button"
+                        src="./assets/img/board_add_task_button.png" alt="">
+                </div>
+
+                <div class="hidden-auto" ondrop="drop('done')" ondragover="allowDrop(event)" id="done">
+
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------------------------- -->
+    </div>
+    <div class="cont-success-message" style="transform: translateY(200%); display: none">
+        <span>Task added to board</span>
+    </div>
+</body>
+
+</html>

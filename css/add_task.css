@@ -1,0 +1,595 @@
+body {
+  margin: 0;
+  background-color:rgb(246,247,248);
+  font-family: 'Inter';
+}
+.header {
+  height: 90px;
+}
+.rightContent {
+  max-height: 100vH !important;
+}
+.rightContent h1 {
+  font-size: 61px;
+  margin-bottom: 50px;
+}
+.aboutHeadline {
+  display: none;
+}
+.addTask {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  left: calc(232px + 10%);
+  max-height: calc(100vH - 90px);
+  width: calc(100% - 232px - 10% - 10%);
+  padding-top: 80px;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 422px;
+  margin-bottom: 25px;
+}
+.addTask span {
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+.info {
+  position: absolute;
+  left: calc(50% - 163px + 116px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 74px;
+  width: 326px;
+  border-radius: 20px;
+  background-color: #2A3647;
+  color: white;
+  z-index: 999;
+  animation: info 2.5s;
+  font-size: 21px;
+}
+.info img {
+  height: 26px;
+  width: 22px;
+}
+@keyframes info {
+  0%, 100% {
+    bottom: -100px;
+  }
+  30% {
+  bottom: 20%;
+  }
+  70% {
+    bottom: 20%;
+  }
+}
+
+
+
+
+/* left */
+.addTaskLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* fields */
+input{
+  height: 51px;
+  padding: 0 21px 0 21px;
+  font-size: 21px;
+  border: 1px solid #D1D1D1;
+  border-radius: 10px;
+}
+input::placeholder {
+  color: rgb(220,220,220);
+}
+textarea:focus, input:focus, select:focus {
+  outline: none;
+}
+form span {
+  font-weight: 500;
+}
+
+/* DESCRIPTION */
+textarea {
+  width: 422px;
+  height: 119px;
+  border: 1px solid #D1D1D1;
+  border-radius: 10px;
+  font-family: arial;
+  padding: 18px 21px 18px 21px;
+  font-size: 21px;
+  resize: none;
+  white-space: pre-wrap;
+}
+textarea::placeholder {
+  color: rgb(220,220,220);
+}
+
+
+/* CATEGORY */
+.selectField {
+  font-size: 21px;
+  border-radius: 10px;
+  border: 1px solid #D1D1D1;
+  cursor: pointer;
+  background-color: white;
+  transition: all 150ms ease-in-out;
+  overflow: auto;
+  z-index: 800;
+}
+.selectCategory {
+  height: 51px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11.5px 21px 11.5px 21px;
+  background-color: white;
+}
+#selectField {
+  height: 53px !important;
+}
+#selectFieldContact {
+  height: 53px !important;
+}
+.selectCategory img {
+  padding-right: 5px;
+}
+.selectCategory input {
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.selectCategory input:nth-child(1) {
+  width: 30px;
+}
+.oneCategory {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 11.5px;
+  padding-bottom: 11.5px;
+  padding-left: 21px;
+}
+.oneCategory img {
+  margin-right: 5px;
+}
+.oneCategory:hover {
+  background-color: rgb(194, 194, 194);
+}
+.center {
+  display: flex;
+  align-items: center;
+}
+.right {
+  position: absolute;
+  right: 20px;
+}
+#categoryColors {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 240px;
+}
+#categoryColors img {
+  cursor: pointer;
+}
+#categoryColor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#category:focus {
+  outline: none;
+}
+.color {
+  width: 22px;
+}
+.imageCat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#categoryImage img {
+  padding-right: 0 !important;
+}
+
+
+/* ASSIGNED TO */
+.oneContact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11.5px 21px 11.5px 21px;
+}
+.oneContact:hover {
+  background-color: rgb(194, 194, 194);
+}
+.contactButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+  border: 1px solid black;
+}
+#contact:focus {
+  outline: none;
+}
+.paddingRight{
+  padding-right: 21px;
+}
+.selectContact {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+}
+.selectContact input {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.selectContact img {
+  padding-left: 5px;
+}
+#contact {
+  color: #dcdcdc;
+}
+#addedContacts {
+  display: flex;
+  flex-wrap: wrap;
+}
+.firstLetters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  margin: 15px 15px 15px 0;
+  border-radius: 100%;
+  font-size: 16px !important;
+  color:white;
+  font-weight: 400;
+
+}
+
+
+/* DUE DATE */
+#datepicker {
+  cursor: pointer;
+}
+#ui-datepicker-div {
+  z-index: 900 !important;
+}
+
+
+/* PRIO */
+.prioButtons {
+  display: flex;
+  justify-content: space-between;
+}
+.prioButtons div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 21px;
+  height: 51px;
+  width: 136px;
+  border: 1px solid #D1D1D1;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.prioButtons div:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 1px 2px 0px rgb(0, 0, 0, 0.2);
+}
+
+
+/* SUBTASK */
+.newSubtask {
+  font-size: 14px !important;
+  margin: 0 !important;
+}
+.newSubtasks {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.newSubtasks img {
+  height: 15px;
+}
+
+
+/* middle */
+.imageLine {
+  height: 500px;
+  width: 10px;
+  margin-top: 120px;
+}
+
+
+/* right */
+.addTaskRight {
+  display: flex;
+  flex-direction: column;
+  margin-top: 124px;
+}
+
+
+/* BUTTONS CLEAR CREATE */
+.ccButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 160px;
+  
+}
+.ccButtons div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 61px;
+  width: 130px;
+  font-size: 21px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.ccButtons button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 61px;
+  width: 177px;
+  font-size: 21px;
+  border-radius: 10px;
+  border: 1px solid #2a3647;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  background-color: #2a3647;
+  color: white;
+  margin-left: 20px;
+}
+.ccButtons img {
+  margin-left: 15px;
+}
+
+
+.d-none {
+  display: none !important;
+}
+
+
+@media (max-width: 1400px) {
+  /* fields */
+.column {
+    width: 300px;
+}
+textarea {
+    width: 300px;    
+}
+.prioButtons div {
+  font-size: 18px;
+  width: 95px;
+  }
+.prioButtons img {
+  height: 15px;
+  width: 15px;
+}
+.category input {
+  width: 170px;
+}
+.contacts input {
+  width: 245px;
+}
+.addTask span {
+  font-size: 18px;
+}
+input {
+  font-size: 18px;
+}
+textarea {
+  font-size: 18px;
+}
+.selectField {
+  font-size: 18px;
+}
+.subtask input {
+  width: 200px;
+}
+}
+
+
+@media (max-width: 1100px) {
+  .addTask {
+    left: calc(232px + 5%);
+    width: calc(100% - 232px - 5% - 5%);
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .addTask {
+    left: calc(160px + 3%);
+    width: calc(100% - 160px - 3% - 3%);
+  }
+  .info {
+    left: calc(50% - 163px + 80px);
+  }
+}
+
+
+@media (max-width: 850px) {
+  .addTask {
+    left: 5%;
+    width: calc(100% - 5% - 5%);
+    padding-top: 30px;
+  }
+  .info {
+    left: calc(50% - 163px);
+  }
+}
+
+
+@media (max-width: 720px) {
+  .addTask {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: 0;
+    height: 100% !important;
+    width: 100%;
+    padding-top: 20px;
+  }
+  input {
+    height: 41px;
+  }
+  textarea {
+    height: 93px;
+  }
+  .prioButtons div {
+    height: 41px;
+  }
+  .selectCategory {
+    height: 41px;
+  }
+  #selectField {
+    height: 43px !important;
+  }
+  #selectFieldContact {
+    height: 43px !important;
+  }
+  #newSubtasks {
+    margin-bottom: 70px;
+  }
+  .addTask h1 {
+    font-size: 47px;
+    margin-bottom: 20px;
+  }
+  .aboutHeadline {
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .imageLine {
+    height: 0;
+    width: 0;
+    margin-top: 0;
+  }
+  .addTaskRight {
+    margin: 0;
+  }
+  .ccButtons {
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    z-index: 900;
+    margin-top:unset;
+
+  }
+  .ccButtons button {
+    height: 51px;
+    width: 124px;
+  }
+  .ccButtons div {
+    height: 51px;
+    width: 100px;
+  }
+  .ccButtons t {
+    display: none;
+  }
+}
+
+
+@media (max-width: 340px) {
+  .column {
+    width: 240px;
+  }
+  textarea {
+    width: 240px;
+    padding: 10px 12px 10px 12px; 
+  }
+  .prioButtons div {
+    font-size: 14px;
+    width: 77px;
+    }
+  .prioButtons img {
+    height: 13px;
+    width: 13px;
+  }
+  .category input {
+    width: 150px;
+  }
+  .selectCategory {
+    padding: 10px 12px 10px 12px; 
+  }
+  .contacts input {
+    width: 190px;
+    padding: 0 0 0 12px;
+  }
+  .crossAndCheck img {
+    height: 12px !important;
+  }
+  #categoryColors {
+    width: 180px;
+  }
+  .paddingRight {
+    padding-right: 12px;
+  }
+  .addTask span {
+    font-size: 18px;
+  }
+  input {
+    font-size: 16px;
+  }
+  textarea {
+    font-size: 16px;
+  }
+  .selectField {
+    font-size: 16px;
+  }
+  .subtask input {
+    width: 200px;
+  }
+  .addTask h1 {
+    font-size: 45px;
+  }
+  .ccButtons img {
+    height: 11px;
+    width: 11px;
+    margin: 0 0 0 4px;
+  }
+  .ccButtons button {
+    width: 90px;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .ccButtons div {
+    font-size: 16px;
+    width: 80px;
+  }
+  .addTaskRight {
+    align-items: center;
+  }
+  .info {
+    width: 260px;
+    left: calc(50% - 130px);
+    font-size: 18px;
+  }
+}
