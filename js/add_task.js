@@ -30,7 +30,7 @@ function getLocalCurrentUser() {
  * function to load all tasks which are saved on the server
  */
 async function loadTasks() {
-  setURL('https://gruppe-430.developerakademie.net/smallest_backend_ever-master');
+  setURL('https://daniela-fehlmann.developerakademie.net/Join/smallest_backend_ever-master');
   await downloadFromServer();
   all_tasks = JSON.parse(backend.getItem('all_tasks')) || [];
   console.log('Alle Aufgaben:', all_tasks);

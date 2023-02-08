@@ -5,7 +5,7 @@ let allradySet = false;
 
 
 async function initBoard() {
-    setURL('https://gruppe-430.developerakademie.net/smallest_backend_ever-master');
+    setURL('https://daniela-fehlmann.developerakademie.net/Join/smallest_backend_ever-master');
     await loadAllTaskFromBackend();
     await loadContactsFromBackend();
     await getCurrentUserFromStorage();

@@ -11,7 +11,7 @@ let mediaQuery = window.matchMedia('(max-width: 800px)');
 async function initSum() {
   await includeHTML();
   setURL(
-    "https://gruppe-430.developerakademie.net/smallest_backend_ever-master"
+    "https://daniela-fehlmann.developerakademie.net/Join/smallest_backend_ever-master"
   );
   await downloadFromServer();
   all_tasks = JSON.parse(backend.getItem("all_tasks"));

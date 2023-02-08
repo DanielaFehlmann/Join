@@ -47,7 +47,7 @@ async function getLogin() {
  */
 async function setBackend() {
   setURL(
-    "https://dr-katja-becker-lindhorst.developerakademie.net/smallest_backend_ever-master"
+    "https://dr-katja-becker-lindhorst.developerakademie.net/Join/smallest_backend_ever-master"
   );
 }
 
