@@ -124,6 +124,7 @@ body {
   font-size: 21px;
 }
 .todo-tasks {
+  margin-bottom: 20px;
   width: 235px;
   padding: 20px;
   background-color: rgb(255, 255, 255);

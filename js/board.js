@@ -625,7 +625,7 @@ function renderBoardTemp(color, category, title, description, date, priority, as
         <div class="progress-subtasks" id="progress-subtasks${index}"><span class="progress-numb" id="progress-numb${index}">0/2 done</span></div>
         </div>
 
-        <div class="task-footer">progress
+        <div class="task-footer">
             <div id="assignedTo${progress}${index}" class="cont-assigned">
 
             </div>

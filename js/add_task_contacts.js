@@ -96,21 +96,21 @@ function select(contactID, i) {
  * function to open or close the contacts-field by clicking on it
  */
 function openCloseContacts() {
-  if (fieldIsOpen()) {
-    closeField();
+  if (contactsFieldIsOpen()) {
+    closeContactsField();
   } else {
-    openField();
+    openContactsField();
   }
   disableInputContact();
 }
 
 
-function fieldIsOpen() {
+function contactsFieldIsOpen() {
   return document.getElementById('selectFieldContact').style.height == '147px';
 }
 
 
-function closeField() {
+function closeContactsField() {
   if ($(window).width() > 720) {
     document.getElementById('selectFieldContact').style.height = '53px';
   } else {
@@ -120,7 +120,7 @@ function closeField() {
 }
 
 
-function openField() {
+function openContactsField() {
   document.getElementById('selectFieldContact').setAttribute('style', 'height: 147px !important;')
   setTimeout(function () {
     document.getElementById('openedContacts').classList.remove('d-none');
