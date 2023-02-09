@@ -4,61 +4,50 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
 * {
   font-weight: 700;
   font-family: "Inter";
   margin: 0;
   box-sizing: border-box;
 }
-
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #a8a8a8;
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #919191;
 }
-
 body {
   background-color: rgb(246, 247, 248);
 }
 
+
 .outer-cont-contacts-main {
   position: absolute;
-
   left: 820px;
   top: 160px;
-
   box-sizing: border-box;
 }
-
 .cont-contacts-head {
   display: flex;
   align-items: center;
   column-gap: 40px;
 }
-
 .contacts-header {
   font-size: 61px;
 }
-
 .head-parting-line {
   width: 0;
   height: 60px;
   border-left: 3px solid #29abe2;
 }
-
 .head-comment {
   font-size: 27px;
   font-weight: 400;
 }
-
 .cont-open-contact {
   display: flex;
   flex-direction: column;
@@ -69,18 +58,15 @@ body {
   top: 200px;
   bottom: 0;
 }
-
 .open-contact-head {
   display: flex;
   align-items: center;
   column-gap: 80px;
 }
-
 .open-contact-head-name h2 {
   font-size: 47px;
   font-weight: 500;
 }
-
 .open-contact-head-name span {
   font-size: 16px;
   font-weight: 400;
@@ -90,42 +76,35 @@ body {
   column-gap: 5px;
   cursor: pointer;
 }
-
 .open-contact-edit {
   display: flex;
   align-items: flex-end;
   column-gap: 50px;
 }
-
 .contact-information-text {
   font-size: 21px;
   font-weight: 400;
 }
-
 .contact-edit-info {
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
 }
-
 .contact-information {
   font-size: 16px;
   font-weight: 700;
 }
-
 .open-contact-infos {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 }
-
 .contact-tel {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
   color: unset;
 }
-
 .contact-new-contact {
   display: flex;
   align-items: center;
@@ -144,14 +123,12 @@ body {
   right: 3%;
   gap: 5px;
 }
-
 .contact-new-contact:hover {
   background-color: #29abe2;
   box-shadow: 2px 2px 10px gray;
   scale: 1.01;
   cursor: pointer;
 }
-
 .open-contact-img {
   height: 120px;
   width: 120px;
@@ -164,7 +141,6 @@ body {
   font-weight: 500;
   border: 1px solid white;
 }
-
 .outer-cont-contacts {
   position: absolute;
   top: 90px;
@@ -175,39 +151,33 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .inner-cont-contacts {
   width: 360px;
   overflow-y: auto;
   margin: 50px 0 50px;
   padding: 10px;
 }
-
 .cont-contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-right: 30px;
 }
-
 .cont-first-letter {
   width: 80%;
   display: flex;
 }
-
 .first-letter-contact {
   margin-top: 20px;
   font-size: 21px;
   font-weight: 400;
 }
-
 .parting-line {
   width: 80%;
   height: 0;
   border-bottom: 1px solid lightgray;
   margin: 10px 0 10px;
 }
-
 .contact {
   width: 100%;
   padding: 10px;
@@ -217,7 +187,6 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
 }
-
 .contact-out {
   width: 100%;
   padding: 10px;
@@ -228,7 +197,6 @@ body {
   margin-bottom: 10px;
   cursor: pointer;
 }
-
 .contact-infos {
   display: flex;
   flex-direction: column;
@@ -237,19 +205,16 @@ body {
   overflow: hidden;
   word-break: unset;
 }
-
 .contact-name {
   font-size: 21px;
   font-weight: 400;
 }
-
 .contact-mail {
   color: #007cee;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
 }
-
 .contact-img {
   height: 42px;
   width: 42px;
@@ -263,11 +228,9 @@ body {
   border: 1px solid white;
   margin: 0 20px 0;
 }
-
 .d-none {
   display: none;
 }
-
 .new-contact-pup-bgr {
   display: flex;
   align-items: center;
@@ -280,7 +243,6 @@ body {
   right: 0;
   background-color: rgba(0, 0, 0, 0.1);
 }
-
 .cont-new-contact-pup {
   position: relative;
   width: 1212px;
@@ -289,7 +251,6 @@ body {
   border-radius: 30px;
   display: flex;
 }
-
 .cont-left-contact-pup {
   width: 463px;
   background-color: #2a3647;
@@ -303,26 +264,21 @@ body {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-
 .cont-left-contact-pup img {
   width: 55px;
   height: 66px;
 }
-
 .cont-left-contact-pup h2 {
   font-size: 61px;
 }
-
 .cont-left-contact-pup span {
   font-weight: 400;
   font-size: 27px;
 }
-
 .cont-left-contact-pup div {
   border-bottom: 2px solid #29abe2;
   width: 90px;
 }
-
 .popup-close {
   position: absolute;
   width: 21.65px;
@@ -331,7 +287,6 @@ body {
   top: 34px;
   cursor: pointer;
 }
-
 .cont-right-contact-pup {
   display: flex;
   flex-direction: column;
@@ -339,18 +294,15 @@ body {
   align-items: center;
   width: 60%;
 }
-
 .cont-create-contact-infos {
   display: flex;
   align-items: center;
   gap: 60px;
 }
-
 .create-contact-pp {
   width: 120px;
   height: 120px;
 }
-
 .cont-create-contact-input {
   display: flex;
   flex-direction: column;
@@ -358,7 +310,6 @@ body {
   padding: 0px;
   gap: 29px;
 }
-
 .cont-create-contact-input input {
   display: flex;
   flex-direction: row;
@@ -370,13 +321,11 @@ body {
   border-radius: 10px;
   background-color: white;
 }
-
 .cont-create-contact-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-
 .create-new-contact-deny {
   display: flex;
   flex-direction: row;
@@ -394,24 +343,20 @@ body {
   cursor: pointer;
   transition: ease-in-out 150ms;
 }
-
 .create-new-contact-deny img {
   transition: ease-in-out 150ms;
   transform: rotate(45deg);
   filter: brightness(0);
 }
-
 .create-new-contact-deny:hover {
   border-color: #29abe2;
   color: #29abe2;
   box-shadow: 2px 2px 10px gray;
   scale: 1.01;
 }
-
 .create-new-contact-deny:hover img {
   filter: brightness(1);
 }
-
 .create-new-contact-check {
   display: flex;
   flex-direction: row;
@@ -430,13 +375,11 @@ body {
   border: unset;
   transition: ease-in-out 150ms;
 }
-
 .create-new-contact-check:hover {
   background-color: #29abe2;
   box-shadow: 2px 2px 10px gray;
   scale: 1.01;
 }
-
 .edit-contact-img {
   display: flex;
   flex-direction: row;
@@ -451,7 +394,6 @@ body {
   font-weight: 500;
   font-size: 47px;
 }
-
 .cont-success-message {
   position: absolute;
   bottom: 50px;
@@ -470,17 +412,15 @@ body {
   transition: all ease-in-out 1s;
   transform: translateY(200%);
 }
-
 #backarrow {
   display: none;
 }
 
-/* CSS for addTak Popup*/
 
+/* CSS for addTak Popup*/
 #head-addtask-pop {
   margin-bottom: 80px;
 }
-
 #contAddTaskToContact {
   position: absolute;
   display: flex;
@@ -493,7 +433,6 @@ body {
   left: 0;
   z-index: 13 !important;
 }
-
 #addTaskPopup {
   padding: 20px;
   border-radius: 16px;
@@ -504,15 +443,12 @@ body {
   left: 232px;
   background-color: rgb(246, 247, 248);
 }
-
 .outside {
   transform: translateX(200%);
 }
-
 .inside {
   transform: translateX(0);
 }
-
 #close-taskpop {
   position: absolute;
   right: 10px;
@@ -552,6 +488,7 @@ body {
   background-repeat: no-repeat;
   background-position: 95% 50%;
 }
+
 
 @media screen and (max-width: 1300px) {
   .outer-cont-contacts {
@@ -624,6 +561,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 1150px) {
   .outer-cont-contacts-main {
     top: 0;
@@ -667,6 +605,7 @@ body {
   }
 }
 
+
 @media (max-width: 1230px) {
   .cont-new-contact-pup {
     width: 1000px;
@@ -693,6 +632,7 @@ body {
     height: 51px;
   }
 }
+
 
 @media (max-width: 1030px) {
   .cont-new-contact-pup {
@@ -733,6 +673,7 @@ body {
   }
 }
 
+
 @media screen and (max-width: 1000px) {
   .outer-cont-contacts-main {
     padding-left: 160px;
@@ -748,13 +689,13 @@ body {
     font-size: 14px;
     padding: 2px;
   }
-
   #addTaskPopup {
     width: 75%;
     left: 130px;
     width: 720px;
   }
 }
+
 
 @media screen and (max-width: 850px) {
   .cont-contacts-head {
@@ -830,7 +771,6 @@ body {
   .edit-contact-img {
     margin-top: -60px;
   }
-
   #contAddTaskToContact {
     position: absolute;
     display: flex;
@@ -843,7 +783,6 @@ body {
     left: 0;
     z-index: 13 !important;
   }
-
   #addTaskPopup {
     width: 100%;
     left: 0;
@@ -853,38 +792,35 @@ body {
   }
 }
 
+
 @media (max-width: 720px) {
   #close-taskpop {
     right: 10px;
     font-size: 14px;
     font-weight: 400;
   }
-
   #ccButtons-pop {
     position: absolute;
     top: -70px;
   }
-
   #form-task-mobil {
     width: 100%;
     height: 100%;
     align-items: flex-start;
   }
-
   #head-addtask-pop {
     margin-bottom: 40px;
   }
-
   #contAddTaskToContact {
     width: 100%;
     height: 100%;
     align-items: flex-start;
   }
-
   #temp-task {
     width: 100%;
   }
 }
+
 
 @media (max-width: 600px) {
   .cont-open-contact {
@@ -894,6 +830,7 @@ body {
     width: 220px;
   }
 }
+
 
 @media (max-width: 545px) {
   .create-new-contact-check {
@@ -908,6 +845,7 @@ body {
     font-size: 40px;
   }
 }
+
 
 @media (max-width: 415px) {
   .create-new-contact-check {
@@ -924,6 +862,7 @@ body {
     row-gap: 10px;
   }
 }
+
 
 @media (max-width: 380px) {
   .inner-cont-contacts {
@@ -960,11 +899,13 @@ body {
   }
 }
 
+
 @media (max-width: 340px) {
   .cont-contact {
     padding-right: 5px;
   }
 }
+
 
 @media (max-width: 320px) {
   .cont-left-contact-pup h2 {
@@ -1003,6 +944,7 @@ body {
     font-size: 20px;
   }
 }
+
 
 @media (max-width: 310px) {
   .contact-img {

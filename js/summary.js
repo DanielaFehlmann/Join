@@ -2,11 +2,6 @@ let urgent_tasks = [];
 let mediaQuery = window.matchMedia('(max-width: 800px)');
 
 
-/**
- * functions for getting Items from server and include templates from here
- */
-
-
 /**function that fetches tasks from backend and creates a Json */
 async function initSum() {
   await includeHTML();
@@ -48,10 +43,6 @@ async function includeHTML() {
   }
 }
 
-
-/**
- * functions to render task properties from here
- */
 
 /**function to render summary with actual tasks */
 function renderSummary() {
@@ -141,10 +132,6 @@ function countTasksTodo() {
   return todo;
 }
 
-
-/**
- * functions for creating urgent tasks from here
- */
 
 /**function to render all urgent tasks on summary*/
 function createUrgentBox() {
@@ -239,6 +226,7 @@ function generateUrgentHTML(i, taskdate) {
 </div>`;
 }
 
+
 function generateUrgentNullHTML(){
   return `<div class="deadline-container" onclick="getToBoard()">
   <span class="deadline"></span>
@@ -253,11 +241,6 @@ function generateUrgentOverHTML(){
   <p><b>Upcoming Deadline over</b></p>
 </div>`;
 }
-
-
-/**
- * functions for date formate from here
- */
 
 
 /**
@@ -328,11 +311,6 @@ function constructDate(date) {
 }
 
 
-/**
- * functions for user-greeting from here
- */
-
-
 /**function to get the user, who is logged in */
 async function getCurrentUserFromStorage() {
   let currentUserAsText = localStorage.getItem("current_user");
@@ -371,18 +349,11 @@ function greetCurrentUser() {
 }
 
 
-/**
- * common functions from here
- */
-
-
 /**function to get on to Board-Window */
 function getToBoard() {
   window.location.href = "board.html";
 }
 
-
-/**functions to change the attribute (img) on hovering the done/todo containers on summary */
 
 /**
  * function to change img-src on hover
@@ -452,27 +423,29 @@ function resizeElements(){
   }
 }
 
-/**functions for chat-pop */
 
+/**function for chat-pop */
 function raise(){
   document.getElementById("popmessage").classList.remove("small");
   document.getElementById("popmessage").classList.add("big");
 }
 
 
+/**function for chat-pop */
 function toSmall(){
   document.getElementById("popmessage").classList.add("small");
   document.getElementById("popmessage").classList.remove("big");
 }
 
-/**functions for container-move in js */
 
+/**functions for container-move in js */
 function moveVertical(classn){
   let todos=document.getElementsByClassName(classn);
   for (let i=0;i<todos.length;i++){
     todos[i].classList.add("verticaldown");
 }
 }
+
 
 function removeVertical(classn){
   let todos=document.getElementsByClassName(classn);
@@ -481,12 +454,14 @@ function removeVertical(classn){
 }
 }
 
+
 function moveVertivalup(classn){
   let todos=document.getElementsByClassName(classn);
   for (let i=0;i<todos.length;i++){
     todos[i].classList.add("verticalup");
 }
 }
+
 
 function removeVertivalup(classn){
   let todos=document.getElementsByClassName(classn);
@@ -495,12 +470,14 @@ function removeVertivalup(classn){
 }
 }
 
+
 function moveHorizLeft(classn){
   let todos=document.getElementsByClassName(classn);
   for (let i=0;i<todos.length;i++){
     todos[i].classList.add("horizonleft");
 }
 }
+
 
 function removeHorizLeft(classn){
   let todos=document.getElementsByClassName(classn);
@@ -509,12 +486,14 @@ function removeHorizLeft(classn){
 }
 }
 
+
 function moveHorizonRight(classn){
   let todos=document.getElementsByClassName(classn);
   for (let i=0;i<todos.length;i++){
     todos[i].classList.add("horizonright");
 }
 }
+
 
 function removeHorizonRight(classn){
   let todos=document.getElementsByClassName(classn);
@@ -523,10 +502,12 @@ function removeHorizonRight(classn){
 }
 }
 
+
 function hoverProgress(){
   moveVertical("important-container");
   moveVertical("todo");
 }
+
 
 function unhoverProgress(){
   removeVertical("important-container");
@@ -539,37 +520,8 @@ function hoverImportant(){
   moveVertical("todo");
 }
 
+
 function unhoverImportant(){
   removeVertivalup("progress");
   removeVertical("todo");
 }
-
-
-/*function hoverTaskCont(){
-  let tc=document.getElementById("task-overview");
-  tc.style.width="600px";
-  tc.style.height="110%"
-}
-
-function unhoverTaskCont(){
-  let tc=document.getElementById("task-overview");
-  tc.style.width="580px";
-  tc.style.height="100%";
-}
-
-
-function hoverEvent(){
-  let moveble=document.getElementsByClassName("move");
-  for(let i=0;i<moveble.length;i++){
-moveble[i].addEventListener("mouseover",(event) =>{
-  let tc=document.getElementById("task-overview");
-  tc.style.width="600px";
-  tc.style.height="110%"
-})
-moveble[i].addEventListener("mouseleave",(event)=>{
-  let tc=document.getElementById("task-overview");
-  tc.style.width="580px";
-  tc.style.height="100%";
-})
-  }
-}*/

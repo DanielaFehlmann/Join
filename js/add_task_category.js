@@ -44,12 +44,22 @@ function addNewCategory() {
   categoryName.style.color = 'black';
   selectedCategory = '';
   selectedColor = '';
-  document.getElementById('categoryImage').innerHTML = `<div onclick="notOpenCloseCategories(event)" class="crossAndCheck"><img src="assets/img/cross.svg" onclick="cancelNewCategory()"> <img src="assets/img/finish.svg" onclick="acceptNewCategory()"></div>`;
+  document.getElementById('categoryImage').innerHTML = categoryImageHTML();
   document.getElementById('categoryColors').classList.remove('d-none');
   document.getElementById('selectField').removeAttribute('onclick');
   document.getElementById('categoryColor').innerHTML = '';
   categoryName.focus();
 }
+
+
+function categoryImageHTML() {
+  return `
+  <div onclick="notOpenCloseCategories(event)" class="crossAndCheck">
+    <img src="assets/img/cross.svg" onclick="cancelNewCategory()">
+    <img src="assets/img/finish.svg" onclick="acceptNewCategory()">
+  </div>`;
+}
+
 
 
 /**
@@ -99,32 +109,36 @@ function acceptNewCategory() {
  * function to open or close the category-field by clicking on it
  */
 function openCloseCategories() {
-  if (document.getElementById('selectField').style.height == '192px') {
-    if ($(window).width() > 720) {
-    document.getElementById('selectField').style.height = '53px';
-    } else {
-      document.getElementById('selectField').style.height = '43px';
-    }
-    document.getElementById('openedCategories').classList.add('d-none');
+  if (fieldIsOpen()) {
+    closeField();
   } else {
-    document.getElementById('selectField').setAttribute('style', 'height: 192px !important;');
-    setTimeout(function () {
-      document.getElementById('openedCategories').classList.remove('d-none');
-    }, 150)
+    openField();
   }
   disableInput();
 }
 
 
-// function checkMediaQuery() {
-//   if ((window.innerWidth == 715) || (window.innerWidth == 725)) {
-//     console.log('bigscreen');
-//     openCloseCategories();
-//   }
-// }
+function fieldIsOpen() {
+  return document.getElementById('selectField').style.height == '192px'
+}
 
 
-// window.addEventListener('resize', checkMediaQuery);
+function closeField() {
+  if ($(window).width() > 720) {
+    document.getElementById('selectField').style.height = '53px';
+    } else {
+      document.getElementById('selectField').style.height = '43px';
+    }
+    document.getElementById('openedCategories').classList.add('d-none');
+}
+
+
+function openField() {
+  document.getElementById('selectField').setAttribute('style', 'height: 192px !important;');
+  setTimeout(function () {
+    document.getElementById('openedCategories').classList.remove('d-none');
+  }, 150)
+}
 
 
 /**

@@ -26,7 +26,6 @@ function setUserImgTest() {
 }
 
 
-// drag and drop funktion
 function dragStart(id) {
     currentDragElement = id;
 }
@@ -42,10 +41,11 @@ async function drop(progress) {
 function allowDrop(ev) {
     ev.preventDefault();
 }
-// -----
 
 
-// load and upload to backend
+/**
+ * function to load from and to backend
+ */
 async function boardSaveToBackend() {
     await downloadFromServer();
     let JSONAsText = JSON.stringify(loadedBoard);
@@ -69,7 +69,6 @@ async function loadContactsFromBackend() {
         loadedContacts = [];
     };
 }
-// -----
 
 
 /**
@@ -323,6 +322,7 @@ async function addTaskBoard(param) {
     formId.setAttribute("onsubmit", "createTaskBoard('" + param + "');return false;");
     renderAllContacts();
     datepicker();
+    addPrio(0);
 }
 
 
@@ -625,7 +625,7 @@ function renderBoardTemp(color, category, title, description, date, priority, as
         <div class="progress-subtasks" id="progress-subtasks${index}"><span class="progress-numb" id="progress-numb${index}">0/2 done</span></div>
         </div>
 
-        <div class="task-footer">
+        <div class="task-footer">progress
             <div id="assignedTo${progress}${index}" class="cont-assigned">
 
             </div>
@@ -636,11 +636,31 @@ function renderBoardTemp(color, category, title, description, date, priority, as
 }
 
 
+function deleteTaskMobile(index) {
+    loadedBoard.splice(index, 1);
+    saveOpenedTask();
+}
+
+
+function nextSection(index) {
+    if (loadedBoard[index]['progress'] == 'todo') {
+        loadedBoard[index]['progress'] = 'in Process';
+    } else if (loadedBoard[index]['progress'] == 'in Process') {
+        loadedBoard[index]['progress'] = 'awaiting Feedback';
+    } else if (loadedBoard[index]['progress'] == 'awaiting Feedback') {
+        loadedBoard[index]['progress'] = 'done';
+    }
+    saveOpenedTask();
+}
+
+
 function openBoardTaskTemp(color, category, title, description, date, priority, priorityColor, progress, index) {
     return `
     <div class="cont-popup-board-task">
         <!--buttons-->
         <img onclick="saveOpenedTask()" class="popup-close" src="./assets/img/board_popup_close.png" alt="">
+        <button onclick="deleteTaskMobile(${index})" class="popup-edit-button deleteTask"><img src="./assets/img/trash.png"></button>
+        <button onclick="nextSection(${index})" class="popup-edit-button nextSection">next Section</button>
         <button onclick="editPopupTask('${title}', '${description}', '${date}', '${index}')" class="popup-edit-button"><img src="./assets/img/board_popup_edit.png"
                 alt=""></button>
         <!--Head area-->

@@ -131,8 +131,8 @@ function changePrioColors() {
  */
 function addNewSubtask() {
   let newSubtaskInput = document.getElementById('newSubtaskInput');
-  document.getElementById('newSubtasks').innerHTML = ''; //alle subtasks löschen
-  if (!newSubtaskInput.value == '') { //wenn inputfeld nicht leer dann ....
+  if (!newSubtaskInput.value == '' && allSubtasks.length < 5) { //wenn inputfeld nicht leer dann ....
+    document.getElementById('newSubtasks').innerHTML = '';
     allSubtasks.push(newSubtaskInput.value); //... füge das vom input in allsubtasks ein
     for (let i = 0; i < allSubtasks.length; i++) {
       let newSubtask = allSubtasks[i];
@@ -150,8 +150,9 @@ function addNewSubtask() {
  * @param {String} newSubtask - a subtask in the array "allSubtasks"
  */
 function changeImage (newSubtask) {
+  let index = selectedSubtasks.findIndex(obj => obj.name == newSubtask);
   subtaskImageSrc = "assets/img/subtask_rectangle.svg";
-  if (selectedSubtasks.includes(newSubtask)) {
+  if (index > -1) {
     subtaskImageSrc = "assets/img/subtask_ok.png";
   }
 }
@@ -178,9 +179,8 @@ function showSubtask (i, newSubtask) {
  * @param {number} i - number to checkmark the correct subtask 
  */
 function checkmark(i) {
-  let newSubtask ={"name":allSubtasks[i],
-  "state":"todo"};
-  let index = selectedSubtasks.indexOf(newSubtask);
+  let newSubtask = {"name": allSubtasks[i], "state": "todo"};
+  let index = selectedSubtasks.findIndex(obj => obj.name == allSubtasks[i]);
   if (index == -1) {
     document.getElementById('checkbox' + i).src = 'assets/img/subtask_ok.png';
     selectedSubtasks.push(newSubtask);
@@ -290,5 +290,5 @@ function showInfo() {
   document.getElementById('info').classList.remove('d-none');
   setTimeout(function() {
     document.getElementById('info').classList.add('d-none');
-  },3800);
+  },2400);
 }

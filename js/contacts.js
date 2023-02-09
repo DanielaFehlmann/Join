@@ -23,9 +23,29 @@ async function initContacts() {
     setURL('https://daniela-fehlmann.developerakademie.net/Join/smallest_backend_ever-master');
     await loadContactsFromBackend();
     checkForColor();
+    sort();
     renderContacts();
+    sort();
     await getCurrentUserFromStorage();
     setUserImg();
+}
+
+
+function sort() {
+    var mylist = document.getElementById('contAllContacts');
+    var divs = mylist.getElementsByClassName('sort');
+    var listitems = [];
+    for (i = 0; i < divs.length; i++) {
+            listitems.push(divs.item(i));
+    }
+    listitems.sort(function(a, b) {
+        var compA = a.getAttribute('id');
+        var compB = b.getAttribute('id');
+        return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+    });
+    for (i = 0; i < listitems.length; i++) {
+        mylist.appendChild(listitems[i]);
+    }
 }
 
 
@@ -146,6 +166,7 @@ function checkIfOneOpen(i, j) {
     }
 }
 
+
 function closeDetail() {
     let details = document.getElementById('openContact');
     details.classList.add('d-none');
@@ -159,7 +180,6 @@ function resetAllBgrColors() {
             bgr[i].removeAttribute("style");
         }
     }
-
     let font = document.getElementsByClassName('contact-name');
     for (let i = 0; i < font.length; i++) {
         if (font[i].style.color) {
@@ -174,6 +194,7 @@ function closeAddTask(){
     closeDetail();
     resetAllBgrColors();
 }
+
 
 /**
  * all funktions from edit contact from here
@@ -260,8 +281,7 @@ function getRandomColor() {
 
 
 function showDivWithTransition() {
-    setTimeout(function () {
-        var div = document.querySelector('.cont-success-message');
+    var div = document.querySelector('.cont-success-message');
         div.style.display = "flex";
         setTimeout(function () {
             div.style.transform = "translateY(0)";
@@ -270,8 +290,7 @@ function showDivWithTransition() {
                 setTimeout(function () {
                     div.style.display = "none";
                 }, 1000);
-            }, 5000);
-        }, 1000);
+            }, 3000);
     }, 1000);
 }
 
@@ -394,7 +413,7 @@ function renderDetailsTemp(contactName, contactMail, contactColor, contactPhone,
 
 function renderLetterSectionLayOut(bigLetter, i) {
     return `
-    <div class="cont-contact">
+    <div class="cont-contact sort" id='${bigLetter}'>
         <div class="cont-first-letter">
             <h2 class="first-letter-contact">${bigLetter}</h2>
         </div>

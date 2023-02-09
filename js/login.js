@@ -1,8 +1,5 @@
 let loadedContacts=[]
 
-/**
- * functions before showing content
- */
 
 /**
  *function for moving the start-logo from center to left corner 
@@ -16,12 +13,14 @@ function moveLogo() {
   setTimeout(removeStartbackground,100)
 }
 
+
 /**
  * function for undisplay the startbackground by adding class
  */
 function removeStartbackground(){
     document.getElementById("start-background").classList.add("d-none");
 }
+
 
 /**
  * function to change background-opacity bei class-change
@@ -31,6 +30,7 @@ function backgroundOpacity(){
     bg.classList.remove("start");
     bg.classList.add("stop");
 }
+
 
 /**
  *function to wait some time before moving logo and getting login-box 
@@ -47,14 +47,9 @@ async function getLogin() {
  */
 async function setBackend() {
   setURL(
-    "https://dr-katja-becker-lindhorst.developerakademie.net/Join/smallest_backend_ever-master"
+    "https://daniela-fehlmann.developerakademie.net/Join/smallest_backend_ever-master"
   );
 }
-
-
-/**
- * functions for login user from here
- */
 
 
 /**
@@ -74,7 +69,6 @@ async function getUsers() {
   await downloadFromServer();
   users = JSON.parse(backend.getItem("users")) || [];
   loadedContacts = JSON.parse(backend.getItem("contacts")) || [];
-  
 }
 
 function remberValueInLogin(){
@@ -87,6 +81,7 @@ function remberValueInLogin(){
     removeJustRegistrated();
   }
 }
+
 
 /**
  * function to find the logged User 
@@ -108,12 +103,13 @@ async function getCurrentUser() {
   }
 }
 
+
 /**function to reset value of loginfields */
 function resetLogin(){
   document.getElementById("mail-login").value="";
   document.getElementById("password-login").value="";
-
 }
+
 
 /**
  * function to storage current User local 
@@ -146,11 +142,6 @@ function togglePassword(id, id2) {
 
 
 /**
- * functions for guest-user from here
- */
-
-
-/**
  * function to login a guestUser 
  */
 function guestLogin() {
@@ -170,11 +161,6 @@ function guestLogin() {
 function getDemoSummary() {
   window.location.href = "summary.html";
 }
-
-
-/**
- * functions for registration new user from here
- */
 
 
 /**
@@ -259,11 +245,6 @@ async function checknewUser(newUser) {
     
 
 /**
- * 
- * functions to set a new user to contacts (without phone) from here
- */
-
-/**
  * function checks if new user is already in contacts
  * @param {string} newUser -Parameter is name of registrating user
  * @returns {boolean} - true if user is not in contacts yet
@@ -323,11 +304,6 @@ async function saveContactsToBackend() {
 
 
 /**
- * functions to save users to backend from here
- */
-
-
-/**
  * function to save all Users at backend
  */
 async function saveUsers() {
@@ -352,10 +328,8 @@ async function saveUser(newUser) {
 
 
 /**
- * functions for opening popups
+ * function for opening popups
  */
-
-
 function openPopup() {
   let popup = document.getElementById("popup-user");
   popup.classList.remove("d-none");
@@ -406,11 +380,6 @@ function changeClass() {
   popup_p.classList.add("center");
   setTimeout(newPassword, 3000);
 }
-
-
-/**
- * functions for password from here
- */
 
 
 /** 
@@ -512,10 +481,6 @@ async function set_new_password() {
 }
 
 
-/**
- * common functions
- */
-
 /**functions to change window */
 function locateToLogin() {
   window.location.href = "login.html";
@@ -579,7 +544,6 @@ function removeTrys(){
 /**
  * functions for remember me 
  */
-
 function checkRemember(logname,logpassword){
   if (document.getElementById("rememberme").checked==true){
     setRemember(logname,logpassword);
@@ -587,39 +551,37 @@ function checkRemember(logname,logpassword){
   }
 
 
-  function setRemember(logname,logpassword){
-    localStorage.setItem("current_logname",logname);
-    localStorage.setItem("current_password",logpassword);
+function setRemember(logname,logpassword){
+  localStorage.setItem("current_logname",logname);
+  localStorage.setItem("current_password",logpassword);
+}
+
+
+function getRememberName(){
+  return localStorage.getItem("current_logname");
+}
+
+
+function getRememberPW(){
+  return localStorage.getItem("current_password");
+}
+
+
+function deleteRemember(){
+    localStorage.removeItem("current_logname");
+    localStorage.removeItem("current_password");
+}
+
+
+function rememberToForm(){
+  let namevalue=getRememberName();
+  let pwvalue=getRememberPW();
+  if(getRememberName()){
+    document.getElementById("mail-login").value=namevalue;
+    document.getElementById("password-login").value=pwvalue;
   }
+}
 
-
-  function getRememberName(){
-    return localStorage.getItem("current_logname");
-  }
-
-
-  function getRememberPW(){
-   return localStorage.getItem("current_password");
-  }
-
-
-  function deleteRemember(){
-      localStorage.removeItem("current_logname");
-      localStorage.removeItem("current_password");
-  }
-
-
-  function rememberToForm(){
-    let namevalue=getRememberName();
-    let pwvalue=getRememberPW();
-    if(getRememberName()){
-      document.getElementById("mail-login").value=namevalue;
-      document.getElementById("password-login").value=pwvalue;
-    }
-  }
-
-
-  /**functions for password-field */
 
   /**
    * functions for toggle value of password-input
@@ -629,8 +591,8 @@ function checkRemember(logname,logpassword){
     function getValueLogin(id,id_pic){
     changePic(id,id_pic);
     checkValuePic();
-    
   }
+
 
   function changePic(id,id_pic){
     let eye=document.getElementById(id_pic);
@@ -644,6 +606,7 @@ function checkRemember(logname,logpassword){
     setTypePassword(id,id_pic);
   }
 
+
   function setTypePassword(id,id_pic){
     let eye=document.getElementById(id_pic).getAttribute("src");
     if (eye=="assets/img/eyeopen.svg"){
@@ -653,12 +616,14 @@ function checkRemember(logname,logpassword){
     }
   }
 
+
   function checkValuePic(){
     let eye=document.getElementById("eyelock").getAttribute("src");
     if(eye=="assets/img/password-icon.svg"){
       renderValueLogin();
     }
   }
+
 
   function cleanLogin(id1,id2,id3=""){
     document.getElementById(id1).value="";
@@ -667,6 +632,7 @@ function checkRemember(logname,logpassword){
       document.getElementById(id3).value="";
     }
   }
+
 
   function renderValueLogin(){
     let name=getRememberName();
@@ -677,6 +643,7 @@ function checkRemember(logname,logpassword){
     }
   }
 
+  
   function isNoValue(){
     if( document.getElementById("mail-login").value=="" ||
     document.getElementById("password-login").value==""){

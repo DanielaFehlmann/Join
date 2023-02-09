@@ -90,6 +90,7 @@ input {
   height: 35px;
   width: 450px;
   margin-bottom: 49px;
+  outline: none;
 }
 
 form {
@@ -112,14 +113,6 @@ form {
   padding-left: 10px;
   background-repeat: no-repeat;
 }
-
-/*.password-input {
-  background-image: url("../assets/img/password-icon.svg");
-  background-position: 95% 50%;
-  padding-left: 10px;
-  background-repeat: no-repeat;
-}*/
-
 .name-input {
   background-image: url("../assets/img/name.svg");
   background-position: 95% 50%;

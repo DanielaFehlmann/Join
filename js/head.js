@@ -66,9 +66,6 @@ function createUserPic() {
     }
 }
 
-/**
- * functions for locate to 
-*/
 
 function locateToLegalNote() {
   window.location.href = "legalnotice.html";
