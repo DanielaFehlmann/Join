@@ -439,7 +439,7 @@ body {
   z-index: 15;
   background-color: white;
   transition: all 175ms ease-in-out;
-  top: 20%;
+  top: calc(50% - 330px);
   left: 232px;
   background-color: rgb(246, 247, 248);
 }
@@ -716,9 +716,6 @@ body {
   .cont-open-contact {
     padding-left: 20px;
   }
-  #addTaskPopup {
-    top: 0;
-  }
   .cont-new-contact-pup {
     height: 75%;
     display: flex;
@@ -786,6 +783,8 @@ body {
   #addTaskPopup {
     width: 100%;
     left: 0;
+    top: -10px;
+    height: calc(100vH - 70px);
     background-color: rgb(246, 247, 248);
     border-radius: unset;
     padding-top: 10px;
@@ -800,8 +799,11 @@ body {
     font-weight: 400;
   }
   #ccButtons-pop {
-    position: absolute;
+    position: relative;
+    justify-content: space-between;
     top: -70px;
+    left: 0;
+    width: 100%;
   }
   #form-task-mobil {
     width: 100%;

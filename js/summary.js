@@ -20,12 +20,16 @@ async function initSum() {
   handleMediaSize();
   renderSummary();
   storeSession();
+  checkWindow();
 }
 
 
 function storeSession(){
   sessionStorage.setItem("session",true)
 }
+
+
+function changeBgColor(){}
 
 
 /**function to include the template */

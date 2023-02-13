@@ -147,17 +147,18 @@
                 </div>
                 <div id="newSubtasks"></div>
             </div>
-
+            <!-- buttons -->
+            <div class="addtask-buttons popupBoardButtonsPosition">
+              <button type="reset" onclick="closeAddTaskBoard()" class="addtask-deny">
+                  Cancle <img src="./assets/img/contact_add_task.png" alt="">
+              </button>
+              <button type="submit" class="addtask-check">
+                  Create Task <img src="./assets/img/contact_check.png" alt="">
+              </button>
+          </div>
         </div>
     </div>
-    <!-- buttons -->
-    <div class="addtask-buttons popupBoardButtonsPosition">
-        <button type="reset" onclick="closeAddTaskBoard()" class="addtask-deny">
-            Cancle <img src="./assets/img/contact_add_task.png" alt="">
-        </button>
-        <button type="submit" class="addtask-check">
-            Create Task <img src="./assets/img/contact_check.png" alt="">
-        </button>
-    </div>
+    
+    
     <img onclick="closeAddTaskBoard()" class="popup-close" src="./assets/img/board_popup_close.png" alt="">
 </form>

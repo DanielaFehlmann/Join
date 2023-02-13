@@ -15,6 +15,7 @@ async function initBoard() {
     setUserImgTest();
     checkForColor();
     datepicker();
+    checkWindow();
 }
 
 
@@ -659,10 +660,6 @@ function openBoardTaskTemp(color, category, title, description, date, priority, 
     <div class="cont-popup-board-task">
         <!--buttons-->
         <img onclick="saveOpenedTask()" class="popup-close" src="./assets/img/board_popup_close.png" alt="">
-        <button onclick="deleteTaskMobile(${index})" class="popup-edit-button deleteTask"><img src="./assets/img/trash.png"></button>
-        <button onclick="nextSection(${index})" class="popup-edit-button nextSection">next Section</button>
-        <button onclick="editPopupTask('${title}', '${description}', '${date}', '${index}')" class="popup-edit-button"><img src="./assets/img/board_popup_edit.png"
-                alt=""></button>
         <!--Head area-->
         <h2 style="background-color: ${color};" class="task-head">${category}</h2>
         <span class="popup-task-titel">${title}</span>
@@ -684,7 +681,11 @@ function openBoardTaskTemp(color, category, title, description, date, priority, 
         <span id="openTaskAssignedTo" class="popup-details">Assigned To:</span>
 
         <div id="subtask-container"></div>
-
+        <div class="buttonsBelow">
+          <button onclick="deleteTaskMobile(${index})" class="popup-edit-button deleteTask"><img src="./assets/img/trash.png"></button>
+          <button onclick="nextSection(${index})" class="popup-edit-button nextSection">next Section</button>
+          <button onclick="editPopupTask('${title}', '${description}', '${date}', '${index}')" class="popup-edit-button"><img src="./assets/img/board_popup_edit.png"></button>
+        </div>
 
     </div>
     `;

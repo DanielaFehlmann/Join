@@ -28,6 +28,7 @@ async function initContacts() {
     sort();
     await getCurrentUserFromStorage();
     setUserImg();
+    checkWindow();
 }
 
 

@@ -47,10 +47,15 @@
 .nav-hover {
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .nav-hover:hover {
     background-color: #091931;
+}
+
+.bgColor {
+  background-color: #091931 !important;
 }
 
 .nav-item p{
@@ -72,11 +77,12 @@
 
 .cont-footer {
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    height: max-content;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
     column-gap: 20px;
     cursor: pointer;
+    width: 100%;
 }
 
 .nav-footer {
@@ -148,7 +154,7 @@
             display: flex;
             align-items: center;
             width: 70px;
-            height: 46px;
+            height: 70px;
             text-decoration: none;
             cursor: pointer;
             transition: ease-in-out 150ms;

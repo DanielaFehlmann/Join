@@ -16,6 +16,7 @@ async function init() {
   addPrio(0);
   datepicker();
   setUserImg();
+  checkWindow();
 }
 
 function getLocalCurrentUser() {

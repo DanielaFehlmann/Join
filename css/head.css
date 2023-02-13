@@ -94,7 +94,6 @@
 #popup-logout p {
   z-index: 3;
   margin-right: 50px;
-  margin-bottom: 5px;
   text-align: center;
   color: white;
   display: flex;
@@ -133,7 +132,10 @@
   .menuPopMobil {
     display: unset !important;
   }
-
+  .logout {
+    height: 110px;
+    justify-content: space-between;
+  }
   #popup-logout {
     margin-top: 70px;
   }

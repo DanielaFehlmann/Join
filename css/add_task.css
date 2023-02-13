@@ -22,7 +22,6 @@ body {
   align-items: flex-start;
   position: absolute;
   left: calc(232px + 10%);
-  max-height: calc(100vH - 90px);
   width: calc(100% - 232px - 10% - 10%);
   padding-top: 80px;
 }
@@ -341,7 +340,7 @@ textarea::placeholder {
   justify-content: space-between;
   align-items: center;
   height: 61px;
-  width: 130px;
+  width: 115px;
   font-size: 21px;
   border-radius: 10px;
   border: 1px solid #2a3647;
@@ -445,6 +444,9 @@ textarea {
   .info {
     left: calc(50% - 163px);
   }
+  #ccButtons-pop {
+    bottom: 110px;
+  }
 }
 
 
@@ -502,7 +504,7 @@ textarea {
     position: fixed;
     top: 10px;
     right: 5px;
-    z-index: 900;
+    z-index: 1000;
     margin-top:unset;
     height: 70px;
   }

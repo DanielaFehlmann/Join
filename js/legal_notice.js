@@ -2,6 +2,7 @@ async function init() {
   await includeHTML();
   getLocalCurrentUser();
   setUserImg();
+  checkWindow();
 }
 
 
