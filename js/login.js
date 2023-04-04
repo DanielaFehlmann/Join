@@ -46,7 +46,7 @@ async function getLogin() {
  */
 async function setBackend() {
   setURL(
-    "https://daniela-fehlmann.developerakademie.net/Join/smallest_backend_ever-master"
+    "https://daniela-fehlmann.at/Join/smallest_backend_ever-master"
   );
 }
 
