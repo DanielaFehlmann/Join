@@ -1,4 +1,6 @@
-/**function to open the add task popup on contacts */
+/**
+ * function to open the add task popup on contacts
+*/
 async function openAddTask() {
   await loadTasks();
   await loadContacts();
@@ -13,7 +15,10 @@ async function openAddTask() {
   setTimeout(easein, 50);
 }
 
-/**function to ease the popup in by changing classnames */
+
+/**
+ * function to ease the popup in by changing classnames 
+*/
 function easein() {
   let task_popup = document.getElementById("addTaskPopup");
   let bg = document.getElementById("contAddTaskToContact");
@@ -21,7 +26,10 @@ function easein() {
   task_popup.classList.add("inside");
 }
 
-/**function to undisplay the creator */
+
+/**
+ * function to undisplay the creator 
+*/
 function closeTaskCreator() {
   let task_popup = document.getElementById("addTaskPopup");
   let bg = document.getElementById("contAddTaskToContact");
@@ -30,7 +38,10 @@ function closeTaskCreator() {
   task_popup.classList.add("outside");
 }
 
-/**function to render the possible contacts you can choose the assign from */
+
+/**
+ * function to render the possible contacts you can choose the assign from 
+*/
 async function renderContactsToAssigned() {
   for (let i = 0; i < allContacts.length; i++) {
     const contact = allContacts[i]["name"];

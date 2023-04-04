@@ -32,7 +32,6 @@
 }
 
 #user-img {
-  /*background-color: rgb(43, 54, 71);*/
   color: white;
   display: flex;
   width: 50px;
@@ -128,14 +127,17 @@
     height: 80px;
   }
 }
+
 @media screen and (max-width: 850px) {
   .menuPopMobil {
     display: unset !important;
   }
+
   .logout {
     height: 110px;
     justify-content: space-between;
   }
+
   #popup-logout {
     margin-top: 70px;
   }

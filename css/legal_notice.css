@@ -1,19 +1,23 @@
 body {
   margin: 0;
-  background-color:rgb(246,247,248);
+  background-color: rgb(246, 247, 248);
   font-family: 'Inter';
 }
+
 .header {
   height: 90px;
 }
+
 .rightContent h1 {
   font-size: 61px;
   margin-bottom: 50px;
 }
+
 .rightContent h2 {
   font-size: 27px;
   margin-bottom: 10px;
 }
+
 .legalNotice {
   display: flex;
   flex-direction: column;
@@ -24,10 +28,12 @@ body {
   width: calc(100% - 232px - 10% - 10%);
   padding-top: 50px;
 }
+
 .legalNotice p {
   font-size: 16px;
   margin-bottom: 50px;
 }
+
 .subtitle {
   font-size: 40px !important;
 }
@@ -62,9 +68,11 @@ body {
   .rightContent h1 {
     font-size: 40px;
   }
+
   .rightContent h2 {
     font-size: 20px;
   }
+
   .subtitle {
     font-size: 30px !important;
   }
@@ -76,9 +84,11 @@ body {
     font-size: 35px;
     margin-bottom: 40px;
   }
+
   .subtitle {
     font-size: 25px !important;
   }
+
   .legalNotice {
     align-items: center;
   }
@@ -89,9 +99,11 @@ body {
   .rightContent h1 {
     font-size: 35px;
   }
+
   .rightContent h2 {
     font-size: 16px;
   }
+
   .subtitle {
     font-size: 20px !important;
   }

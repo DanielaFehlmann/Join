@@ -74,7 +74,7 @@ body {
   padding-right: 115px;
 }
 
-login-container h1{
+login-container h1 {
   text-align: center;
 }
 
@@ -107,12 +107,14 @@ form {
   margin-top: 24px;
   margin-bottom: 35px;
 }
+
 .mail-input {
   background-image: url("../assets/img/email-icon.svg");
   background-position: 95% 50%;
   padding-left: 10px;
   background-repeat: no-repeat;
 }
+
 .name-input {
   background-image: url("../assets/img/name.svg");
   background-position: 95% 50%;
@@ -144,9 +146,9 @@ form {
   cursor: pointer;
 }
 
-#confirm-info{
-  color:red;
-  font-size:12px;
+#confirm-info {
+  color: red;
+  font-size: 12px;
   width: 100%;
   margin-top: -40px;
 }
@@ -413,6 +415,7 @@ button {
   h1 {
     margin-bottom: 10px;
   }
+
   #newuser-container {
     transform: scale(0.8);
     left: 0;
@@ -571,7 +574,7 @@ button {
     font-size: 14px;
   }
 
-  login-container h1{
-    font-size:30px;
+  login-container h1 {
+    font-size: 30px;
   }
 }

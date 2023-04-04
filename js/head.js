@@ -1,4 +1,6 @@
-/**function to go to login-window */
+/**
+ * function to go to login-window 
+*/
 function logout() {
   document.getElementById("popup-logout").classList.add("d-none");
   resetUser();
@@ -7,13 +9,17 @@ function logout() {
 }
 
 
-/**function to remove session */
+/**
+ * function to remove session 
+*/
 function unstoreSession(){
   sessionStorage.removeItem("session")
 }
 
 
-/**function that toogles the display of logout-opportunity*/
+/**
+ * function that toogles the display of logout-opportunity
+*/
 function showLogout() {
   let logout = document.getElementById("popup-logout");
   if (logout.classList.contains("d-none")) {
@@ -24,7 +30,9 @@ function showLogout() {
 }
 
 
-/**function to clear variables at logout */
+/**
+ * function to clear variables at logout 
+*/
 function resetUser() {
   all_tasks = [];
   current_img = "./assets/img/user_prototype.png";
@@ -36,7 +44,9 @@ function resetUser() {
 }
 
 
-/**function to set the user color as background head pic */
+/**
+ * function to set the user color as background head pic
+*/
 function setUserImg() {
   if (current_user["img"]) {
     document
@@ -51,7 +61,9 @@ function setUserImg() {
 }
 
 
-/**function to create first letters to head pic */
+/**
+ * function to create first letters to head pic
+*/
 function createUserPic() {
   let name_part = current_user["username"].split(" ");
   for (let i = 0; i < name_part.length; i++) {

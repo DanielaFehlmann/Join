@@ -47,13 +47,11 @@
             updateStatus('Laden ...');
             loadJSONFromServer()
                 .then(function (result) {
-                    console.log(result);
                     myJSON = JSON.parse(result);
                     updateStatus('Laden erfolgreich!');
                 })
                 .catch(function (error) {
                     updateStatus('Fehler beim Laden');
-                    console.error('error', error);
                 });
         }
 

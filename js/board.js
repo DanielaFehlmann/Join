@@ -170,7 +170,7 @@ function renderBoardFiltered(index, id) {
     assignedToId.innerHTML = '';
     renderAssignedTo(assignedToLength, assignedTo, assignedToId);
 
-    showProgressSubtasks(task,index);
+    showProgressSubtasks(task, index);
 }
 
 
@@ -717,61 +717,61 @@ async function deleteTask() {
 
 /**function calculate subtasks */
 
-function showProgressSubtasks(task,index){
-    let number_subtasks=task["subtasks"].length;
-    if(number_subtasks>0){
-    let array_done_subt=task["subtasks"].filter((s)=>s["state"]=="done");
-    let numb_done=array_done_subt.length;
-    let width_done=100*(numb_done/number_subtasks)
-    let width_progress=document.getElementById("progress-subtasks"+index);
-    width_progress.style.width=width_done+"%";
-    document.getElementById("progress-numb"+index).innerHTML=`${numb_done}/${number_subtasks}`
-    checkNoSubtasksDone(width_done,width_progress)
-    }else{
-        document.getElementById("progressbar"+index).classList.add("d-none")
+function showProgressSubtasks(task, index) {
+    let number_subtasks = task["subtasks"].length;
+    if (number_subtasks > 0) {
+        let array_done_subt = task["subtasks"].filter((s) => s["state"] == "done");
+        let numb_done = array_done_subt.length;
+        let width_done = 100 * (numb_done / number_subtasks)
+        let width_progress = document.getElementById("progress-subtasks" + index);
+        width_progress.style.width = width_done + "%";
+        document.getElementById("progress-numb" + index).innerHTML = `${numb_done}/${number_subtasks}`
+        checkNoSubtasksDone(width_done, width_progress)
+    } else {
+        document.getElementById("progressbar" + index).classList.add("d-none")
     }
 }
 
 
-function checkNoSubtasksDone(width_done,width_progress){
-    if(width_done==0){
-        width_progress.style.width="100%";
-        width_progress.style.backgroundColor="white";
-        width_progress.style.border="transparent";
+function checkNoSubtasksDone(width_done, width_progress) {
+    if (width_done == 0) {
+        width_progress.style.width = "100%";
+        width_progress.style.backgroundColor = "white";
+        width_progress.style.border = "transparent";
     }
 }
 
 
-function renderSubtasks(index){
-    for (let i=0;i<loadedBoard[index]["subtasks"].length;i++){
-    document.getElementById("subtask-container").innerHTML+=`
+function renderSubtasks(index) {
+    for (let i = 0; i < loadedBoard[index]["subtasks"].length; i++) {
+        document.getElementById("subtask-container").innerHTML += `
     <div class=cont-subtask>
     <input class="check" id="check${index}${i}"type="checkbox" onclick="checkSubtask(${index},${i})">
     <span> ${loadedBoard[index]["subtasks"][i]["name"]}</span>
     `
-    setCheckValue(index,i)
+        setCheckValue(index, i)
     }
 }
 
 
-function setCheckValue(index,i){
-    if(loadedBoard[index]["subtasks"][i]["state"]=="done"){
-        document.getElementById("check"+index+i).setAttribute("checked","true")
+function setCheckValue(index, i) {
+    if (loadedBoard[index]["subtasks"][i]["state"] == "done") {
+        document.getElementById("check" + index + i).setAttribute("checked", "true")
     }
 }
 
 
-function checkSubtask(index,i){
-    let value_checkbox=document.getElementById("check"+index+i);
-    if (value_checkbox.checked){
-        loadedBoard[index]["subtasks"][i]["state"]="done";
-    }else{
-        loadedBoard[index]["subtasks"][i]["state"]="todo";
+function checkSubtask(index, i) {
+    let value_checkbox = document.getElementById("check" + index + i);
+    if (value_checkbox.checked) {
+        loadedBoard[index]["subtasks"][i]["state"] = "done";
+    } else {
+        loadedBoard[index]["subtasks"][i]["state"] = "todo";
     }
 }
 
 
-async function saveOpenedTask(){
+async function saveOpenedTask() {
     await boardSaveToBackend();
     closeBoardTask();
     initBoard();

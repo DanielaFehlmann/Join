@@ -122,14 +122,11 @@ function filterFirstLetters() {
 
 
 function splitName(fullName) {
-    // let fullName = "David Eisenberg";
     let nameParts = fullName.split(" ");
     let firstName = nameParts[0];
     let lastName = nameParts[nameParts.length - 1];
     let bothFirstLetters = firstName.charAt(0) + lastName.charAt(0);
     return bothFirstLetters
-    // console.log(firstName); Output: "David"
-    // console.log(lastName); Output: "Eisenberg"
 }
 
 

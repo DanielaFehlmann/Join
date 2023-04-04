@@ -4,9 +4,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: rgb(246, 247, 248);
 }
+
 .cont-board-side {
   display: flex;
   flex-direction: column;
@@ -17,11 +19,13 @@ body {
   top: 160px;
   box-sizing: border-box;
 }
+
 .cont-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .header-board {
   font-size: 61px;
 }
@@ -32,6 +36,7 @@ body {
   display: flex;
   column-gap: 20px;
 }
+
 .find-task {
   display: flex;
   padding: 10px;
@@ -39,19 +44,23 @@ body {
   border: 1px solid lightgray;
   background-color: white;
 }
+
 .find-task-input {
   border: none;
   font-size: 16px;
   outline-width: 0;
 }
+
 .find-task-input-img {
   height: 20px;
 }
+
 .find-task-stripe {
   width: 0;
   height: 30px;
   border-left: 1px solid lightgray;
 }
+
 .cont-find-task-right {
   display: flex;
   align-items: center;
@@ -74,11 +83,13 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .add-task:hover {
   background-color: #29ABE2;
   box-shadow: 2px 2px 10px gray;
   scale: 1.01;
 }
+
 .add-task-plus-img {
   height: 15px;
 }
@@ -89,6 +100,7 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .trash-img {
   height: 50px;
   width: 50px;
@@ -103,11 +115,13 @@ body {
   flex-wrap: wrap;
   gap: 50px;
 }
+
 .hidden-auto {
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 228px;
 }
+
 .todo-head {
   display: flex;
   justify-content: space-around;
@@ -116,13 +130,16 @@ body {
   font-size: 21px;
   margin-bottom: 50px;
 }
+
 .todo-head img {
   width: 30px;
   height: 30px;
 }
+
 .todo-header {
   font-size: 21px;
 }
+
 .todo-tasks {
   margin-bottom: 20px;
   width: 235px;
@@ -132,6 +149,7 @@ body {
   box-sizing: border-box;
   cursor: pointer;
 }
+
 .task-head {
   color: white;
   font-weight: 400;
@@ -141,20 +159,24 @@ body {
   border-radius: 8px;
   margin-bottom: 20px;
 }
+
 .task-titel {
   font-size: 16px;
   margin-bottom: 10px;
 }
+
 .task-description {
   color: #A8A8A8;
   word-wrap: break-word;
 }
+
 .cont-progress {
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .progress {
   width: 60%;
   background-color: white;
@@ -164,6 +186,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
 .progress-bar {
   display: flex;
   flex-direction: column;
@@ -188,6 +211,7 @@ body {
   border: solid 1px black;
   border-radius: 15px;
 }
+
 .progress-subtasks {
   background-color: rgb(55, 165, 212);
   border-radius: 15px;
@@ -195,6 +219,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .progress-numb {
   color: rgb(255, 255, 255);
   font-size: 10px;
@@ -207,9 +232,11 @@ body {
   align-items: center;
   margin-top: 20px;
 }
+
 .cont-assigned {
   display: flex;
 }
+
 .assigned {
   height: 35px;
   width: 35px;
@@ -223,6 +250,7 @@ body {
   margin-right: -8px;
   border: 2px solid white;
 }
+
 .board-priority {
   height: 12px;
   width: 17px;
@@ -242,6 +270,7 @@ body {
   right: 0;
   background-color: rgba(0, 0, 0, 0.1);
 }
+
 .cont-popup-board-task {
   z-index: 11;
   position: relative;
@@ -258,6 +287,7 @@ body {
   padding: 50px;
   gap: 45px;
 }
+
 .popup-close {
   position: absolute;
   width: 21.65px;
@@ -266,11 +296,13 @@ body {
   top: 34px;
   cursor: pointer;
 }
+
 .buttonsBelow {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .popup-edit-button {
   display: flex;
   flex-direction: row;
@@ -285,20 +317,24 @@ body {
   border-radius: 10px;
   border: none;
 }
+
 .popup-edit-button:hover {
   background-color: #29ABE2;
   box-shadow: 2px 2px 10px gray;
   scale: 1.01;
   cursor: pointer;
 }
+
 .popup-task-titel {
   font-weight: 700;
   font-size: 61px;
 }
+
 .popup-task-description {
   font-weight: 400;
   font-size: 21px;
 }
+
 .popup-details {
   display: flex;
   flex-direction: column;
@@ -308,15 +344,18 @@ body {
   /* overflow: auto; */
   width: 100%;
 }
+
 .popup-date {
   font-weight: 400;
   font-size: 21px;
 }
+
 .cont-popup-details {
   display: flex;
   align-items: center;
   column-gap: 30px;
 }
+
 .popup-priority {
   display: flex;
   flex-direction: row;
@@ -327,9 +366,11 @@ body {
   gap: 10px;
   color: white;
 }
+
 .popup-priority img {
   filter: brightness(0) invert(1);
 }
+
 .popup-assigned {
   display: flex;
   flex-direction: column;
@@ -343,11 +384,13 @@ body {
   font-weight: 400;
   border-radius: 100%;
 }
+
 .popup-assigned-to-contacts {
   display: flex;
   align-items: center;
   gap: 30px;
 }
+
 .popup-assigned-to-contacts span {
   font-weight: 400;
   font-size: 21px;
@@ -363,6 +406,7 @@ body {
 .deleteTask {
   left: 455px;
 }
+
 .deleteTask img {
   height: 40px;
   width: 40px;
@@ -385,16 +429,19 @@ body {
   min-height: 228px;
   max-height: 550px;
 }
+
 .add-task-button {
   transition: ease-in-out 150ms;
   filter: brightness(0);
 }
+
 .add-task-button:hover {
   filter: brightness(1);
   color: #29abe2;
   scale: 1.01;
   cursor: pointer;
 }
+
 .contPopupAddTaskBoard {
   position: relative;
   background-color: white;
@@ -407,40 +454,48 @@ body {
   flex-direction: column;
   gap: 50px;
 }
+
 .popupAddTaskBoardMain span {
   font-size: 21px;
   padding-bottom: 10px;
 }
+
 .popupAddTaskBoardMain {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   overflow: auto;
 }
+
 .popupAddTaskBoardLeft {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .popupAddTaskBoardRight {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .contPopupAddTaskBoardHead h1 {
   font-weight: 700;
   font-size: 61px;
 }
+
 .dividingBar {
   height: 669px;
   width: 1px;
   border-right: 2px solid #D1D1D1;
 }
+
 .popupBoardButtonsPosition {
   position: absolute;
   bottom: 50px;
   right: 50px;
 }
+
 .popup-close {
   position: absolute;
   width: 21.65px;
@@ -450,6 +505,7 @@ body {
   top: 34px;
   cursor: pointer;
 }
+
 .contPopupEditTaskBoard {
   position: relative;
   background-color: white;
@@ -463,20 +519,25 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .contPopupEditTaskBoard span {
   font-size: 21px;
 }
+
 #descriptionTextarea {
   height: 100px;
 }
+
 .newSubtask {
   padding-bottom: unset !important;
 }
+
 .mobile-header {
   position: absolute;
   top: -50px;
   display: none;
 }
+
 .addtask-deny {
   display: flex;
   flex-direction: row;
@@ -494,20 +555,24 @@ body {
   cursor: pointer;
   transition: ease-in-out 150ms;
 }
+
 .addtask-deny img {
   transition: ease-in-out 150ms;
   transform: rotate(45deg);
   filter: brightness(0);
 }
+
 .addtask-deny:hover {
   border-color: #29abe2;
   color: #29abe2;
   box-shadow: 2px 2px 10px gray;
   scale: 1.01;
 }
+
 .addtask-deny:hover img {
   filter: brightness(1);
 }
+
 .addtask-check {
   display: flex;
   flex-direction: row;
@@ -526,26 +591,31 @@ body {
   border: unset;
   transition: ease-in-out 150ms;
 }
+
 .addtask-check:hover {
   background-color: #29abe2;
   box-shadow: 2px 2px 10px gray;
   scale: 1.01;
 }
+
 .addtask-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+
 #subtask-container {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .cont-subtask {
   display: flex;
   align-items: center;
 }
+
 .check {
   margin-right: 10px;
   cursor: pointer;
@@ -556,11 +626,13 @@ body {
   .add-task {
     font-size: 16px;
   }
+
   .cont-head {
     flex-direction: column;
     align-items: flex-start;
     row-gap: 20px;
   }
+
   .contPopupAddTaskBoard {
     position: absolute;
     top: 0;
@@ -572,6 +644,7 @@ body {
     border-radius: unset;
     box-shadow: none;
   }
+
   .popupAddTaskBoardMain {
     justify-content: space-evenly;
   }
@@ -581,25 +654,31 @@ body {
   .cont-todo {
     justify-content: center;
   }
+
   .cont-child-todo {
     width: 100%;
     text-align: center;
   }
+
   .todo-head {
     width: unset;
     justify-content: space-between;
   }
+
   .todo-tasks {
     width: unset;
     text-align: start;
   }
+
   .add-task span {
     display: none;
   }
+
   .add-task-plus-img {
     height: 30px;
     width: 30px;
   }
+
   .add-task {
     height: 50px;
     width: 50px;
@@ -607,9 +686,11 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .cont-find-task {
     align-items: center;
   }
+
   .trash-img {
     height: 40px;
     width: 40px;
@@ -621,20 +702,25 @@ body {
   .popupAddTaskBoardRight {
     align-items: center;
   }
+
   .popupAddTaskBoardHead {
     text-align: center;
     margin-top: 80px;
   }
+
   .cont-board-side {
     left: 100px;
   }
+
   .mobile-header {
     display: unset;
   }
+
   .popup-board-task-bgr {
     z-index: 22;
     background-color: unset;
   }
+
   .cont-popup-board-task,
   .contPopupEditTaskBoard {
     position: absolute;
@@ -652,33 +738,42 @@ body {
     min-height: calc(100vH - 140px);
     overflow-x: hidden;
   }
+
   #trash {
     display: none;
   }
+
   .column {
     margin-bottom: unset !important;
   }
+
   .firstLetters {
     margin: 5px 5px 5px 0 !important;
   }
+
   .popup-edit-button {
     top: unset;
     bottom: 80px;
     right: 40px;
     left: unset;
   }
+
   .deleteTask {
     right: 110px;
   }
+
   .nextSection {
     right: 180px;
   }
+
   .popup-priority {
     font-size: unset !important;
   }
+
   .popup-details {
     max-height: 250px;
   }
+
   .popupBoardButtonsPosition {
     display: flex;
     justify-content: space-between;
@@ -689,26 +784,32 @@ body {
     margin-bottom: 40px;
     width: 100%;
   }
+
   .addtask-check {
     width: 150px;
     font-size: 17px;
   }
+
   .addtask-deny {
     width: 105px;
     font-size: 17px;
   }
+
   .popup-close {
     filter: unset !important;
   }
+
   .dividingBar {
     display: none;
   }
+
   .popupAddTaskBoardMain {
     flex-direction: column;
     align-items: center;
     justify-content: unset;
     margin-bottom: 20px;
   }
+
   .popupAddTaskBoardLeft {
     margin-bottom: 20px;
   }
@@ -718,6 +819,7 @@ body {
     gap: 10px;
     z-index: 10;
   }
+
   .margin-bottom {
     margin-bottom: 100px;
   }
@@ -729,40 +831,50 @@ body {
     left: 50px;
     right: 50px;
   }
+
   .add-task {
     position: absolute;
     right: 50px;
     top: 10px;
   }
+
   .trash {
     right: 0px !important;
   }
+
   .header-board {
     font-size: 40px;
   }
+
   .add-task-plus-img {
     height: 20px;
     width: 20px;
   }
+
   .trash-img {
     height: 30px;
     width: 30px;
   }
+
   .add-task {
     height: 40px;
     width: 40px;
   }
+
   .find-task {
     width: 230px;
     padding: unset;
   }
+
   .find-task-input {
     width: 180px;
   }
+
   .addtask-check {
     width: 131px;
     font-size: 14px;
   }
+
   .addtask-deny {
     width: 85px;
     font-size: 14px;
@@ -774,23 +886,29 @@ body {
   .header-board {
     font-size: 30px;
   }
+
   .add-task {
     top: 0;
   }
+
   .find-task {
     width: 200px;
   }
+
   .find-task-input {
     width: 150px;
   }
+
   .add-task-plus-img {
     height: 10px;
     width: 10px;
   }
+
   .trash-img {
     height: 20px;
     width: 20px;
   }
+
   .add-task {
     height: 30px;
     width: 30px;

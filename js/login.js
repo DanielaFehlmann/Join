@@ -38,7 +38,6 @@ function backgroundOpacity(){
 async function getLogin() {
   setTimeout(moveLogo, 500)
   getUsers();
-  console.log(users);
 }
 
 
@@ -104,7 +103,9 @@ async function getCurrentUser() {
 }
 
 
-/**function to reset value of loginfields */
+/**
+ * function to reset value of loginfields 
+*/
 function resetLogin(){
   document.getElementById("mail-login").value="";
   document.getElementById("password-login").value="";
@@ -117,7 +118,6 @@ function resetLogin(){
 function setCurrentUserToLocal(currentUser) {
   let currentUserAsText = JSON.stringify(currentUser);
   localStorage.setItem("current_user", currentUserAsText);
-  console.log(currentUser["username"]);
 }
 
 
@@ -236,7 +236,6 @@ async function checknewUser(newUser) {
         newUser["username"] == users[i]["username"]
       ) {
         isNewUser = false;
-        console.log("isUser");
         break;
       }
     }
@@ -256,7 +255,6 @@ async function checkifContact(newUser) {
         newUser["email"] == loadedContacts[i]["email"]
       ) {
         isNewContact = false;
-        console.log("is Contact");
         break;
       }
     }
@@ -308,7 +306,6 @@ async function saveContactsToBackend() {
  */
 async function saveUsers() {
   let usersAsText = JSON.stringify(users);
-  console.log(usersAsText);
   await downloadFromServer();
   await backend.setItem("users", usersAsText);
 }
@@ -321,7 +318,6 @@ async function saveUsers() {
 async function saveUser(newUser) {
   users.push(newUser);
   let usersAsText = JSON.stringify(users);
-  console.log(usersAsText);
   await downloadFromServer();
   await backend.setItem("users", usersAsText);
 }

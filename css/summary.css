@@ -5,7 +5,6 @@ body {
   width: 100%;
   margin: 0;
   background-color: rgb(246, 247, 248);
-
   font-family: "Inter";
 }
 
@@ -38,6 +37,7 @@ body {
   height: 59px;
   border: 3px solid #29abe2;
 }
+
 #heading h1 {
   font-size: 61px;
   margin: unset;
@@ -103,7 +103,7 @@ body {
   gap: 35px;
   flex: none;
   order: 0;
-  flex-grow:0;
+  flex-grow: 0;
 }
 
 .progress {
@@ -297,7 +297,7 @@ body {
 
 #on-board:hover {
   margin-right: 10px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 #in-progress {
@@ -319,7 +319,7 @@ body {
 }
 
 #at-feedback:hover {
-  margin-left:10px;
+  margin-left: 10px;
 }
 
 #important {
@@ -407,25 +407,13 @@ body {
     width: 100%;
     padding-left: 250px;
   }
-
-  /*#heading {
-    font-size: 22px;
-  }
-
-  .progress span {
-    padding: 10px;
-  }
-
-  .progress p {
-    text-align: center;
-    font-size: 16px;
-  }*/
 }
 
 @media screen and (max-width: 1170px) {
   h1 {
     font-size: 45px;
   }
+
   #greeting {
     font-size: 36px;
   }
@@ -484,17 +472,18 @@ body {
   }
 
   .progress-container {
-    gap:unset
+    gap: unset
   }
 
-  #task-overview{
-    gap:unset;
+  #task-overview {
+    gap: unset;
   }
 
-  .todos-container{
-    gap:unset
+  .todos-container {
+    gap: unset
   }
 }
+
 @media screen and (max-width: 900px) {
   .todo {
     padding: 30px;
@@ -519,6 +508,7 @@ body {
     justify-content: center;
     align-items: center;
   }
+
   .greet-container {
     position: absolute;
     top: 0;
@@ -636,6 +626,7 @@ body {
   .urgent-container p {
     font-size: 14px;
   }
+
   #urgent-box {
     margin: unset;
     width: unset;
@@ -805,13 +796,13 @@ body {
 
 @media screen and (max-width: 300px) {
 
-  #task-container{
-    height:45vh;
+  #task-container {
+    height: 45vh;
   }
 
-  .main-content-container{
-    padding-left:10px;
-    padding-right:10px;
+  .main-content-container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .todo {

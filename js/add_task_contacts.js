@@ -137,6 +137,7 @@ function disableInputContact () {
   }
 }
 
+
 /**
  * function to prevent to open or close the category-field
  */

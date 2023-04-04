@@ -19,6 +19,7 @@ async function init() {
   checkWindow();
 }
 
+
 function getLocalCurrentUser() {
   let currentUserAsText = localStorage.getItem('current_user');
   if (currentUserAsText) {
@@ -34,7 +35,6 @@ async function loadTasks() {
   setURL('https://daniela-fehlmann.developerakademie.net/Join/smallest_backend_ever-master');
   await downloadFromServer();
   all_tasks = JSON.parse(backend.getItem('all_tasks')) || [];
-  console.log('Alle Aufgaben:', all_tasks);
 }
 
 
@@ -50,7 +50,6 @@ async function saveAllTasks(task) {
 }
 
 
-//Title
 /**
  * function to add the entered title from the inputfield to the variable called "selectedTitle"
  */
@@ -61,7 +60,6 @@ function addTitle() {
 }
 
 
-//Description
 /**
  * function to add the entered description from the textarea to the variable called "selecteddescription"
  */
@@ -72,7 +70,6 @@ function addDescription() {
 }
 
 
-//DUE DATE
 /**
  * function to open the jquery-datepicker 
  */
@@ -95,7 +92,6 @@ function addDate() {
 }
 
 
-//PRIO
 /**
  * function to change the colors of all prio-buttons and add its priority to the array "selectedPriod"
  * 
@@ -126,15 +122,14 @@ function changePrioColors() {
 }
 
 
-//SUBTASKS
 /**
  * function to add a new subtask to the container under the inputfield
  */
 function addNewSubtask() {
   let newSubtaskInput = document.getElementById('newSubtaskInput');
-  if (!newSubtaskInput.value == '' && allSubtasks.length < 5) { //wenn inputfeld nicht leer dann ....
+  if (!newSubtaskInput.value == '' && allSubtasks.length < 5) {
     document.getElementById('newSubtasks').innerHTML = '';
-    allSubtasks.push(newSubtaskInput.value); //... füge das vom input in allsubtasks ein
+    allSubtasks.push(newSubtaskInput.value);
     for (let i = 0; i < allSubtasks.length; i++) {
       let newSubtask = allSubtasks[i];
       changeImage(newSubtask);
@@ -192,7 +187,6 @@ function checkmark(i) {
 }
 
 
-//CLEAR BUTTON
 /**
  * function to reset the page by clicking on the clear-button
  */
@@ -237,6 +231,7 @@ function resetContent() {
   document.getElementById('contact').value = '';
 }
 
+
 /**
  * function to close the opened-categories-field
  */
@@ -248,6 +243,7 @@ function closeCategories() {
   }
   document.getElementById('openedCategories').classList.add('d-none');
 }
+
 
 /**
  * function to close the opened-contacts-field
@@ -263,7 +259,6 @@ function closeContacts() {
 }
 
 
-//CREATE BUTTON
 /**
  * function to create a new task
  */
