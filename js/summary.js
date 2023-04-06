@@ -8,7 +8,7 @@ let mediaQuery = window.matchMedia('(max-width: 800px)');
 async function initSum() {
   await includeHTML();
   setURL(
-    "https://daniela-fehlmann.at/Join/smallest_backend_ever-master"
+    'https://daniela-fehlmann.at/join/smallest_backend_ever-master'
   );
   await downloadFromServer();
   all_tasks = JSON.parse(backend.getItem("all_tasks"));

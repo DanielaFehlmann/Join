@@ -247,6 +247,9 @@ body {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
 
 .contact-img {

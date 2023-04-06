@@ -157,7 +157,6 @@ body {
   padding: 4px 25px;
   width: min-content;
   border-radius: 8px;
-  margin-bottom: 20px;
 }
 
 .task-titel {
@@ -285,7 +284,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding: 50px;
-  gap: 45px;
+  gap: 25px;
 }
 
 .popup-close {
@@ -327,19 +326,19 @@ body {
 
 .popup-task-titel {
   font-weight: 700;
-  font-size: 61px;
+  font-size: 40px;
 }
 
 .popup-task-description {
   font-weight: 400;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .popup-details {
   display: flex;
   flex-direction: column;
   font-weight: 700;
-  font-size: 21px;
+  font-size: 18px;
   gap: 10px;
   /* overflow: auto; */
   width: 100%;
@@ -347,7 +346,7 @@ body {
 
 .popup-date {
   font-weight: 400;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 .cont-popup-details {
@@ -365,6 +364,7 @@ body {
   border-radius: 10px;
   gap: 10px;
   color: white;
+  font-size: 20px;
 }
 
 .popup-priority img {
@@ -393,7 +393,7 @@ body {
 
 .popup-assigned-to-contacts span {
   font-weight: 400;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 
@@ -517,11 +517,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 0;
+  overflow-y: auto;
 }
 
 .contPopupEditTaskBoard span {
-  font-size: 21px;
+  font-size: 18px;
 }
 
 #descriptionTextarea {
@@ -619,6 +620,7 @@ body {
 .check {
   margin-right: 10px;
   cursor: pointer;
+  max-height: 25px;
 }
 
 

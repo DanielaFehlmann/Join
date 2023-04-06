@@ -20,7 +20,7 @@ function checkForColor() {
  * all funktions for load all contacts from backend and render them from here
  */
 async function initContacts() {
-    setURL('https://daniela-fehlmann.at/Join/smallest_backend_ever-master');
+    setURL('https://daniela-fehlmann.at/join/smallest_backend_ever-master');
     await loadContactsFromBackend();
     checkForColor();
     sort();

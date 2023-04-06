@@ -5,7 +5,7 @@ let allradySet = false;
 
 
 async function initBoard() {
-    setURL('https://daniela-fehlmann.at/Join/smallest_backend_ever-master');
+    setURL('https://daniela-fehlmann.at/join/smallest_backend_ever-master');
     await loadAllTaskFromBackend();
     await loadContactsFromBackend();
     await getCurrentUserFromStorage();
@@ -270,7 +270,7 @@ async function editPopupTask(title, description, date, index) {
     renderAllContacts();
     addContactLoop(index);
     datepicker();
-    renderAllContacts();
+    // renderAllContacts();
     addPrio(prioIndex);
 }
 
@@ -657,7 +657,7 @@ function nextSection(index) {
 
 function openBoardTaskTemp(color, category, title, description, date, priority, priorityColor, progress, index) {
     return `
-    <div class="cont-popup-board-task">
+    <div class="cont-popup-board-task" onclick="event.stopPropagation()">
         <!--buttons-->
         <img onclick="saveOpenedTask()" class="popup-close" src="./assets/img/board_popup_close.png" alt="">
         <!--Head area-->
@@ -776,4 +776,3 @@ async function saveOpenedTask() {
     closeBoardTask();
     initBoard();
 }
-

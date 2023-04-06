@@ -134,7 +134,8 @@ textarea::placeholder {
   cursor: pointer;
   background-color: white;
   transition: all 150ms ease-in-out;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   z-index: 800;
 }
 
@@ -150,11 +151,11 @@ textarea::placeholder {
 }
 
 #selectField {
-  height: 53px !important;
+  height: 54px !important;
 }
 
 #selectFieldContact {
-  height: 53px !important;
+  height: 54px !important;
 }
 
 .selectCategory img {
