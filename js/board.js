@@ -270,7 +270,6 @@ async function editPopupTask(title, description, date, index) {
     renderAllContacts();
     addContactLoop(index);
     datepicker();
-    // renderAllContacts();
     addPrio(prioIndex);
 }
 
