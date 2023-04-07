@@ -144,12 +144,6 @@ function openCloseDetails(contactColor, contact, contactMail, contactPhone, both
 }
 
 
-function renderDetails(contact, contactMail, contactColor, contactPhone, bothFirstLetters) {
-    let openContact = document.getElementById('openContact');
-    openContact.innerHTML = renderDetailsTemp(contact, contactMail, contactColor, contactPhone, bothFirstLetters);
-}
-
-
 function checkIfOneOpen(i, j) {
     resetAllBgrColors();
     let openDetails = document.getElementById('openContact');
@@ -160,8 +154,14 @@ function checkIfOneOpen(i, j) {
         contactBgr.style = "background-color: #2A3647;";
         contactNameColor.style = "color: white;";
     } else {
-        openDetails.classList.add('d-none');
+        // openDetails.classList.add('d-none');
     }
+}
+
+
+function renderDetails(contact, contactMail, contactColor, contactPhone, bothFirstLetters) {
+    let openContact = document.getElementById('openContact');
+    openContact.innerHTML = renderDetailsTemp(contact, contactMail, contactColor, contactPhone, bothFirstLetters);
 }
 
 
@@ -431,7 +431,7 @@ function renderContactsInSectionTemp(contactColor, bothFirstLetters, contact, co
     <div style="background-color: ${contactColor};" class="contact-img">${bothFirstLetters}</div>
     <div class="contact-infos">
         <span id="contactNameColor${outerId}${innerId}" class="contact-name">${contact}</span>
-        <a class="contact-mail" href="mailto:${contactMail}">${contactMail}</a>
+        <a class="contact-mail">${contactMail}</a>
     </div>
     </div>
     `;
