@@ -156,7 +156,7 @@ function clearRender() {
 
 
 /**
- * Render funktion
+ * Render function
  * 
  * @param {string} index includes progress of task
  * @param {string} id includes progress of task without space between 2 words
@@ -267,10 +267,11 @@ async function editPopupTask(title, description, date, index) {
     descriptionId.innerHTML = `${description}`;
     dateId.value = (`${date}`);
     formId.setAttribute("onsubmit", "saveEditPopupBoard('" + index + "');return false;");
-    renderAllContacts();
+    
     addContactLoop(index);
     datepicker();
     addPrio(prioIndex);
+    renderAllContacts();
 }
 
 

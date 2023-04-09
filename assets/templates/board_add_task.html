@@ -1,4 +1,4 @@
-<form id="popupAddTastBoardForm" onsubmit="createTaskBoard();return false;" class="contPopupAddTaskBoard">
+<form id="popupAddTastBoardForm" onsubmit="createTaskBoard();return false;" class="contPopupAddTaskBoard" onclick="closeField(), closeContactsField()">
     <!-- header -->
     <div class="popupAddTaskBoardHead">
         <h1>Add Task</h1>
@@ -20,7 +20,7 @@
             <!-- category -->
             <div class="column category">
                 <span>Category</span>
-                <div class="selectField" id="selectField" onclick="openCloseCategories()">
+                <div class="selectField" id="selectField" onclick="openCloseCategories(), event.stopPropagation()">
                     <div class="selectCategory" id="selectCategory">
                         <div class="center">
                             <div id="categoryColor">
@@ -102,7 +102,7 @@
             <!-- assigned to -->
             <div class="column contacts">
                 <span>Assigned to</span>
-                <div class="selectField" id="selectFieldContact" onclick="openCloseContacts()">
+                <div class="selectField" id="selectFieldContact" onclick="openCloseContacts(), event.stopPropagation()">
                     <div class="selectContact" id="selectContact">
                         <input id="contact" required placeholder="Select contacts to assign">
                         <div id="contactImage"><img class="paddingRight" src="assets/img/arrow_drop.svg"></div>
@@ -149,7 +149,7 @@
             </div>
             <!-- buttons -->
             <div class="addtask-buttons popupBoardButtonsPosition">
-              <button type="reset" onclick="closeAddTaskBoard()" class="addtask-deny">
+              <button type="reset" onclick="closeAddTaskBoard(), event.stopPropagation()" class="addtask-deny">
                   Cancle <img src="./assets/img/contact_add_task.png" alt="">
               </button>
               <button type="submit" class="addtask-check">

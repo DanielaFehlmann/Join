@@ -1,5 +1,5 @@
 <form onsubmit="createTask();return false;">
-<div id="addTaskPopup" class="addTask">
+<div id="addTaskPopup" class="addTask" onclick="closeField(), closeContactsField()">
   <div id="close-taskpop" class="d-none" onclick="closeTaskCreator()">X</div>
   <div class="addTaskLeft">
     <p class="aboutHeadline">Kanban Project Management Tool</p>
@@ -23,7 +23,7 @@
 <!-- CATEGORY -->
     <div class="column category">
       <span>Category</span>
-      <div class="selectField" id="selectField" onclick="openCloseCategories()">
+      <div class="selectField" id="selectField" onclick="openCloseCategories(), event.stopPropagation()">
         <div class="selectCategory" id="selectCategory">
           <div class="center">
             <div id="categoryColor">
@@ -61,7 +61,7 @@
 <!-- ASSIGNED TO-->
     <div class="column contacts">
       <span>Assigned to</span>
-      <div class="selectField" id="selectFieldContact" onclick="openCloseContacts()">
+      <div class="selectField" id="selectFieldContact" onclick="openCloseContacts(), event.stopPropagation()">
         <div class="selectContact" id="selectContact">
           <input id="contact" required placeholder="Select contacts to assign">
           <div id="contactImage"><img class="paddingRight" src="assets/img/arrow_drop.svg"></div>

@@ -30,7 +30,7 @@ function checkWindow() {
   } else if (window.location.href.indexOf("contacts") > -1) {
     setInterval(() => {
     document.getElementById('contactsBg').classList.add('bgColor');
-    }, 200);
+    }, 500);
   } else if (window.location.href.indexOf("legal") > -1) {
     document.getElementById('legalNoticeBg').classList.add('bgColor');
   }

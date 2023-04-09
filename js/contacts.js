@@ -17,7 +17,7 @@ function checkForColor() {
 
 
 /**
- * all funktions for load all contacts from backend and render them from here
+ * all functions for load all contacts from backend and render them from here
  */
 async function initContacts() {
     setURL('https://daniela-fehlmann.at/join/smallest_backend_ever-master');
@@ -70,7 +70,7 @@ async function saveContactsToBackend() {
 
 
 /**
- * all funktions for render contacts from here
+ * all functions for render contacts from here
  */
 function renderContacts() {
     filterFirstLetters();
@@ -131,7 +131,7 @@ function splitName(fullName) {
 
 
 /**
- * all funktions from open contact from here
+ * all functions from open contact from here
  * + change background color to dark-blue 
  * + change font color to white
  * 
@@ -148,14 +148,10 @@ function checkIfOneOpen(i, j) {
     resetAllBgrColors();
     let openDetails = document.getElementById('openContact');
     let contactBgr = document.getElementById(`contactBgr${i}${j}`);
-    let contactNameColor = document.getElementById(`contactNameColor${i}${j}`);
-    if (openDetails.classList.contains('d-none')) {
-        openDetails.classList.remove('d-none');
-        contactBgr.style = "background-color: #2A3647;";
-        contactNameColor.style = "color: white;";
-    } else {
-        // openDetails.classList.add('d-none');
-    }
+    let contactNameColor = document.getElementById(`contactNameColor${i}${j}`); 
+    openDetails.classList.remove('d-none');
+    contactBgr.style = "background-color: #2A3647;";
+    contactNameColor.style = "color: white;";
 }
 
 
@@ -195,7 +191,7 @@ function closeAddTask(){
 
 
 /**
- * all funktions from edit contact from here
+ * all functions from edit contact from here
  * 
  * @param {string} contactName contains Name
  * @param {string} contactMail contains Email
@@ -244,7 +240,7 @@ function closeEditContact() {
 
 
 /**
- * all funktions from create new contact from here
+ * all functions from create new contact from here
  */
 function openNewContact() {
     let newContact = document.getElementById('contCreateNewContact');

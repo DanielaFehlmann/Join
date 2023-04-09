@@ -1,5 +1,5 @@
 <form id="form-task-mobil" onsubmit="createTask();return false;">
-  <div id="addTaskPopup" class="addTask">
+  <div id="addTaskPopup" class="addTask" onclick="closeField(), closeContactsField()">
     <div id="close-taskpop" class="d-none" onclick="closeTaskCreator()">X</div>
     <div class="addTaskLeft">
       <p class="aboutHeadline">Kanban Project Management Tool</p>
@@ -35,7 +35,7 @@
         <div
           class="selectField"
           id="selectField"
-          onclick="openCloseCategories()"
+          onclick="openCloseCategories(), event.stopPropagation()"
         >
           <div class="selectCategory" id="selectCategory">
             <div class="center">
@@ -151,7 +151,7 @@
         <div
           class="selectField"
           id="selectFieldContact"
-          onclick="openCloseContacts()"
+          onclick="openCloseContacts(), event.stopPropagation()"
         >
           <div class="selectContact" id="selectContact">
             <input
