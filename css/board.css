@@ -9,6 +9,30 @@ body {
   background-color: rgb(246, 247, 248);
 }
 
+.cont-child-todo {
+  position: relative;
+}
+
+.plusTask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(167, 167, 167, 0.548);
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.plusTask img {
+  height: 60px;
+  width: 60px;
+  filter: invert(0.3);
+}
+
 .cont-board-side {
   display: flex;
   flex-direction: column;
@@ -141,6 +165,7 @@ body {
 }
 
 .todo-tasks {
+  position: relative;
   margin-bottom: 20px;
   width: 235px;
   padding: 20px;

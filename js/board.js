@@ -34,13 +34,29 @@ function dragStart(id) {
 
 async function drop(progress) {
     loadedBoard[currentDragElement]['progress'] = progress;
+    dNone();
     renderBoard();
-    await boardSaveToBackend()
+    await boardSaveToBackend();
 }
 
 
 function allowDrop(ev) {
     ev.preventDefault();
+}
+
+function dNone() {
+    document.getElementById('plusTaskTodo').classList.add('d-none');
+    document.getElementById('plusTaskProgress').classList.add('d-none');
+    document.getElementById('plusTaskFeedback').classList.add('d-none');
+    document.getElementById('plusTaskDone').classList.add('d-none');
+}
+
+
+function visible() {
+    document.getElementById('plusTaskTodo').classList.remove('d-none');
+    document.getElementById('plusTaskProgress').classList.remove('d-none');
+    document.getElementById('plusTaskFeedback').classList.remove('d-none');
+    document.getElementById('plusTaskDone').classList.remove('d-none');
 }
 
 
@@ -267,7 +283,6 @@ async function editPopupTask(title, description, date, index) {
     descriptionId.innerHTML = `${description}`;
     dateId.value = (`${date}`);
     formId.setAttribute("onsubmit", "saveEditPopupBoard('" + index + "');return false;");
-    
     addContactLoop(index);
     datepicker();
     addPrio(prioIndex);
@@ -321,7 +336,7 @@ async function addTaskBoard(param) {
     let formId = document.getElementById('popupAddTastBoardForm');
     addTaskId.classList.remove('d-none');
     formId.setAttribute("onsubmit", "createTaskBoard('" + param + "');return false;");
-    renderAllContacts();
+    await renderAllContacts();
     datepicker();
     addPrio(0);
 }
@@ -339,12 +354,12 @@ function closeAddTaskBoard() {
  * 
  * @param {number} index includes index number of current task
  */
-function addContactLoop(index) {
+async function addContactLoop(index) {
     let contacts = loadedBoard[index]['contactNames'];
     for (let i = 0; i < contacts.length; i++) {
         let contact = loadedBoard[index]['contactNames'][i];
         let contactId = getContactId(contact);
-        addContactBoard(contactId);
+        await addContactBoard(contactId);
     }
 }
 
@@ -355,19 +370,22 @@ function addContactLoop(index) {
  * @param {number} i - number to get the correct contact
  */
 function addContactBoard(i) {
-    let contactID = document.getElementById('contact' + i);
-    let index = selectedContactNames.indexOf(contactID.innerHTML);
-    let index2 = selectedLetters.findIndex(obj => obj.bothLetters == firstLetters[i]['bothLetters']);
-    if (index > -1) {
-        resetSelectBoard(index, index2, i);
-    } else {
-        selectBoard(contactID, i);
-    };
-    if (!(selectedContactNames == '')) {
-        document.getElementById('contact').value = 'Contacts selected';
-    } else {
-        document.getElementById('contact').value = '';
-    }
+    setTimeout(() => {
+        let contactID = document.getElementById('contact' + i);
+        let index = selectedContactNames.indexOf(contactID.innerHTML);
+        let index2 = selectedLetters.findIndex(obj => obj.bothLetters == firstLetters[i]['bothLetters']);
+        if (index > -1) {
+            resetSelectBoard(index, index2, i);
+        } else {
+            selectBoard(contactID, i);
+        };
+        if (!(selectedContactNames == '')) {
+            document.getElementById('contact').value = 'Contacts selected';
+        } else {
+            document.getElementById('contact').value = '';
+        }  
+    }, 300);
+    
 }
 
 
@@ -650,6 +668,8 @@ function nextSection(index) {
         loadedBoard[index]['progress'] = 'awaiting Feedback';
     } else if (loadedBoard[index]['progress'] == 'awaiting Feedback') {
         loadedBoard[index]['progress'] = 'done';
+    } else if (loadedBoard[index]['progress'] == 'done') {
+        loadedBoard[index]['progress'] = 'todo';
     }
     saveOpenedTask();
 }

@@ -27,7 +27,7 @@
 
 </head>
 
-<body onload="includeHTML(), initBoard()">
+<body onload="includeHTML(), initBoard()" onclick="dNone()">
     <!--includes header and nav bar-->
     <div w3-include-html="./assets/templates/head.html"></div>
     <div w3-include-html="./assets/templates/nav.html"></div>
@@ -82,54 +82,69 @@
         <!--contains todo // in progress // await for feedback // done-->
         <div class="cont-todo">
             <!--todo-->
-            <div class="cont-child-todo">
+            <div class="cont-child-todo" ondrop="drop('todo')" ondragover="allowDrop(event); visible()">
                 <div class="todo-head">
                     <h2 class="todo-header">To do</h2>
                     <img onclick="addTaskBoard('todo')" class="add-task-button"
                         src="./assets/img/board_add_task_button.png" alt="">
                 </div>
 
-                <div class="hidden-auto" ondrop="drop('todo')" ondragover="allowDrop(event)" id="todo">
+                <div class="hidden-auto"   id="todo"></div>
 
+                <div class="plusTask d-none" id="plusTaskTodo">
+                    <img src="./assets/img/plusTask.svg">
                 </div>
+
             </div>
 
             <!--in progress-->
-            <div class="cont-child-todo">
+            <div class="cont-child-todo" ondrop="drop('in Process')" ondragover="allowDrop(event); visible()">
                 <div class="todo-head">
                     <h2 class="todo-header">In Progress</h2>
                     <img onclick="addTaskBoard('in Process')" class="add-task-button"
                         src="./assets/img/board_add_task_button.png" alt="">
                 </div>
 
-                <div class="hidden-auto" ondrop="drop('in Process')" ondragover="allowDrop(event)" id="inProcess">
+                <div class="hidden-auto"  id="inProcess">
 
+                </div>
+
+                <div class="plusTask d-none" id="plusTaskProgress">
+                    <img src="./assets/img/plusTask.svg">
                 </div>
             </div>
 
             <!--await feedback-->
-            <div class="cont-child-todo">
+            <div class="cont-child-todo" ondrop="drop('awaiting Feedback')" ondragover="allowDrop(event); visible()">
                 <div class="todo-head">
                     <h2 class="todo-header">Awaiting Feedback</h2>
                     <img onclick="addTaskBoard('awaiting Feedback')" class="add-task-button"
                         src="./assets/img/board_add_task_button.png" alt="">
                 </div>
 
-                <div class="hidden-auto" ondrop="drop('awaiting Feedback')" ondragover="allowDrop(event)" id="awaitingFeedback">
+                <div class="hidden-auto" " id="awaitingFeedback">
 
+                </div>
+
+                <div class="plusTask d-none" id="plusTaskFeedback">
+                    <img src="./assets/img/plusTask.svg">
                 </div>
             </div>
 
             <!--done-->
-            <div class="cont-child-todo margin-bottom">
+            <div class="cont-child-todo margin-bottom" ondrop="drop('done')" ondragover="allowDrop(event); visible()">
                 <div class="todo-head">
                     <h2 class="todo-header">Done</h2>
                     <img onclick="addTaskBoard('done')" class="add-task-button"
                         src="./assets/img/board_add_task_button.png" alt="">
                 </div>
 
-                <div class="hidden-auto" ondrop="drop('done')" ondragover="allowDrop(event)" id="done">
+                <div class="hidden-auto" id="done">
 
+                </div>
+
+                <div class="plusTask d-none" id="plusTaskDone">
+                    <img src="./assets/img/plusTask.svg">
                 </div>
             </div>
         </div>
